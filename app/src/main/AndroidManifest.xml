@@ -13,6 +13,45 @@
         android:theme="@style/Theme.Coducatif"
         tools:targetApi="31">
         <activity
+            android:name=".quiz6Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz5Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz4Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz3Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz2Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".course_completedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InviteFriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".certifActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Quiz1Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".signupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intro3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".intro2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Intro1Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
