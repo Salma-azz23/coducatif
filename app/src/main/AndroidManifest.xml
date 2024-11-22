@@ -13,6 +13,27 @@
         android:theme="@style/Theme.Coducatif"
         tools:targetApi="31">
         <activity
+            android:name=".quiz3Partiz2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz2Partie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz1Partie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz10Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz9Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz8Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz7Partie1Avtivity"
+            android:exported="false" />
+        <activity
             android:name=".quiz6Partie1Activity"
             android:exported="false" />
         <activity

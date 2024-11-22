@@ -14,7 +14,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="16dp"
-        android:text="6/10"
+        android:text="1/10"
         android:textColor="#666666"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
         android:gravity="center"
-        android:text=" Combien d’éléments un composant React renvoie-t-il?"
+        android:text=". Les Props dans React peuvent________"
         android:textColor="#333333"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/questionCounter"
@@ -68,7 +68,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1 élément"
+                    android:text="Être modifié à l’intérieur du composant
+
+"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -104,7 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" 2 éléments"
+                    android:text=" Ne pas être modifié dans le composant"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -139,7 +141,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Plusieurs éléments"
+                    android:text=" Être modifié dans d’autre composant"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -209,10 +211,3 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-

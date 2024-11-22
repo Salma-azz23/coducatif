@@ -14,7 +14,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="16dp"
-        android:text="6/10"
+        android:text="8/10"
         android:textColor="#666666"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
         android:gravity="center"
-        android:text=" Combien d’éléments un composant React renvoie-t-il?"
+        android:text="Comment accéder à l’état d’un composant à l’intérieur d’une fonction membre?"
         android:textColor="#333333"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/questionCounter"
@@ -68,7 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1 élément"
+                    android:text="this.getState()"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -104,7 +104,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" 2 éléments"
+                    android:text=" this.prototype.stateValue"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -139,7 +139,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Plusieurs éléments"
+                    android:text=" this.state"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -175,7 +175,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Aucune de ces réponses n’est vraie."
+                    android:text=" this.values"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
