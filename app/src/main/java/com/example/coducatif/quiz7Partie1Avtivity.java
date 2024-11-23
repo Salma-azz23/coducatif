@@ -1,4 +1,3 @@
-<<<<<<<< HEAD:app/src/main/java/com/example/coducatif/quiz1Partie2Activity.java
 package com.example.coducatif;
 
 import android.os.Bundle;
@@ -9,13 +8,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class quiz1Partie2Activity extends AppCompatActivity {
+public class quiz7Partie1Avtivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_quiz1_partie2);
+        setContentView(R.layout.activity_quiz7_partie1_avtivity);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -23,5 +22,3 @@ public class quiz1Partie2Activity extends AppCompatActivity {
         });
     }
 }
-========
->>>>>>>> main:app/src/main/java/com/example/coducatif/MainActivity.java
