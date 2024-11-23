@@ -2,91 +2,108 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp"
+    android:orientation="vertical"
+    android:padding="8dp"
     android:background="@drawable/item_background"
     android:elevation="4dp"
-    android:layout_marginBottom="12dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp">
+    android:layout_marginBottom="12dp">
 
-    <!-- Course Image -->
-    <ImageView
-        android:id="@+id/courseImage"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/ic_course_placeholder"
-        android:scaleType="centerCrop"
-        android:layout_marginEnd="12dp"
-        android:contentDescription="Course Image"
-        android:background="@drawable/rounded_button"
-        android:elevation="2dp" />
-
-    <!-- Course Information -->
-    <LinearLayout
-        android:layout_width="0dp"
+    <!-- Section Header -->
+    <TextView
+        android:id="@+id/sectionHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+       android:textColor="#2B7B8C"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       android:padding="8dp"
+       android:visibility="gone"
+       android:background="#E8F1FF" />
 
-        <!-- Category -->
-        <TextView
-            android:id="@+id/Category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="React JS"
-            android:textColor="#FF5722"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-medium"
-            android:background="@drawable/category_background"
-            android:padding="4dp"
-            android:layout_marginBottom="4dp" />
+    <!-- Course Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-        <!-- Course Name -->
-        <TextView
-            android:id="@+id/Course"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Framework of JavaScript"
-            android:textColor="#000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="6dp" />
+        <!-- Course Image -->
+        <ImageView
+            android:id="@+id/courseImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_course_placeholder"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Course Image"
+            android:background="@drawable/rounded_button"
+            android:elevation="2dp" />
 
-        <!-- Price and Rating -->
+        <!-- Course Information -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="4dp">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
+            <!-- Category -->
             <TextView
-                android:id="@+id/Price"
+                android:id="@+id/Category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7058/-"
-                android:textColor="#2B7B8C"
-                android:textSize="14sp"
-                android:layout_marginEnd="16dp" />
+                android:text="React JS"
+                android:textColor="#FF5722"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/category_background"
+                android:padding="4dp"
+                android:layout_marginBottom="4dp" />
 
+            <!-- Course Name -->
             <TextView
-                android:id="@+id/Rating"
+                android:id="@+id/Course"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⭐ 4.2   |   7830 Std"
-                android:textColor="#888"
-                android:textSize="12sp" />
+                android:text="Framework of JavaScript"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Price and Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7058/-"
+                    android:textColor="#2B7B8C"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/Rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐ 4.2   |   7830 Std"
+                    android:textColor="#888"
+                    android:textSize="12sp" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-    <!-- Bookmark Icon -->
-    <ImageView
-        android:id="@+id/bookmark"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/baseline_bookmark_24"
-        android:contentDescription="Bookmark"
-        android:tint="#888"
-        android:layout_marginStart="8dp"
-        android:layout_gravity="center_vertical" />
+        <!-- Bookmark Icon -->
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_bookmark_24"
+            android:contentDescription="Bookmark"
+            android:tint="#888"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
 </LinearLayout>

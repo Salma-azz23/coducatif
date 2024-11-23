@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#F5F5F5">
+
+    <!-- Fond transparent pour le popup -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:gravity="center">
+
+        <!-- Utilisation d'une ImageView pour afficher l'image complète -->
+        <ImageView
+            android:id="@+id/course_completed_image"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:src="@drawable/course_completed"
+            android:contentDescription="Course Completed"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+</RelativeLayout>

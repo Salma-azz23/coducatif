@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <<<<<<< HEAD
@@ -9,3 +10,9 @@
 
 >>>>>>> a56950c07b3a88aef6c327abb9408e6e7ca8c72b
 </selector>
+=======
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EFEFEF"/>
+    <corners android:radius="8dp"/>
+</shape>
+>>>>>>> 2b29fc34020a1fb0ea8977ed0700f36745592f33

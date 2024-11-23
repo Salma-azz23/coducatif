@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.coducatif"
+    namespace = "com.example.coducatif_acceuil" // Correctement définie
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.coducatif"
+        applicationId = "com.example.coducatif_acceuil" // Utilisez une seule fois applicationId
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,7 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-
-
 }

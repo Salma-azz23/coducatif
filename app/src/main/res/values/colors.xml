@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <!-- colors.xml -->
@@ -9,5 +10,13 @@
         <color name="accentColor">#FF4081</color>
         <color name="backgroundGray">#F5F5F5</color>
 
+=======
+    <color name="primaryColor">#0077CC</color>
+    <color name="backgroundGray">#EFEFEF</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#7A7A7A</color>
+    <color name="priceColor">#FF5722</color>
+    <color name="splashBackground">#B4BDC4</color>
+>>>>>>> 2b29fc34020a1fb0ea8977ed0700f36745592f33
 
 </resources>

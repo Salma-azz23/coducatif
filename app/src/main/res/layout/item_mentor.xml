@@ -1,48 +1,50 @@
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
-    android:backgroundTint="#FFFFFF">
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/mentor_item_background"
+    android:layout_marginBottom="8dp">
 
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/mentorProfileImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:contentDescription="Profile Image"
+        android:background="@drawable/circle_background"
+        android:layout_marginEnd="12dp"
+        android:elevation="2dp" />
+
+    <!-- Mentor Information -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
 
-        <ImageView
-            android:id="@+id/mentorimage"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_placeholder" /> <!-- Une image par défaut -->
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <!-- Mentor Name -->
+        <TextView
+            android:id="@+id/mentorName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:text="Ramal"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#000"
+            android:layout_marginBottom="4dp" />
 
-            <TextView
-                android:id="@+id/mentorname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mentor Name"
-                android:textColor="#000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/mentorskill"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Skill or Speciality"
-                android:textColor="#777"
-                android:textSize="14sp" />
-        </LinearLayout>
+        <!-- Mentor Expertise -->
+        <TextView
+            android:id="@+id/mentorExpertise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React JS"
+            android:textSize="14sp"
+            android:textColor="#888"
+            android:fontFamily="sans-serif" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</LinearLayout>
