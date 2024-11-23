@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <shape xmlns:android="http://schemas.android.com/apk/res/android">
         <solid android:color="#FFEBEE" />
         <corners android:radius="8dp" />
     </shape>
+=======
+
+>>>>>>> a56950c07b3a88aef6c327abb9408e6e7ca8c72b
 </selector>
