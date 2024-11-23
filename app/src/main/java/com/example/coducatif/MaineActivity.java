@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.coducatif_acceuil.MainActivity;
 
 
 public class MaineActivity extends AppCompatActivity {
@@ -26,7 +27,9 @@ public class MaineActivity extends AppCompatActivity {
         });
 
 
+
         findViewById(R.id.nextButton).setOnClickListener(v -> {
+
             Intent intent = new Intent(MaineActivity.this, SecondActivity.class);
             startActivity(intent);
             finish();

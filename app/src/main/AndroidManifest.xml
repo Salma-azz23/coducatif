@@ -10,10 +10,89 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Coducatif"
+
+        android:theme="@style/Theme.Coducatifacceuil"
         tools:targetApi="31">
         <activity
+
             android:name=".MaineActivity"
+
+            android:name=".roadmap"
+            android:exported="false" />
+        <activity
+            android:name=".course_activity"
+            android:exported="true" />
+        <activity
+            android:name=".course_course"
+            android:exported="false" />
+        <activity
+            android:name=".course_level"
+            android:exported="false" />
+
+<activity
+            android:name=".quiz3Partiz2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz2Partie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz1Partie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz10Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz9Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz8Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz7Partie1Avtivity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz6Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz5Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz4Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz3Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".quiz2Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".course_completedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InviteFriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".certifActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Quiz1Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".signupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".intro3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".intro2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Intro1Activity"
+            android:exported="false" />
+>>>>>>> main
+        <activity
+            android:name=".MainActivity"
+>>>>>>> e3869aa668b176d18717b5f09b2bf11eb0d185cf
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+=======
+>>>>>>> 520dab5147b1a36c17e9bb8f514ee1cb50e51e12
+=======
+>>>>>>> main
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.14666666666666667" />
+      </ProjectState>
+    </option>
+  </component>
+>>>>>>> 520dab5147b1a36c17e9bb8f514ee1cb50e51e12
+=======
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+>>>>>>> main
+</project>
