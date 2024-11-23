@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Result for Frontend"
+        android:text="Result "
         android:textSize="14sp"
         android:textColor="#000"
         android:fontFamily="sans-serif-medium" />
