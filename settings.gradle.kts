@@ -20,5 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Coducatif-acceuil"
+rootProject.name = "Coducatif"
 include(":app")
  

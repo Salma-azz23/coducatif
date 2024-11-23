@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.widget.ImageView;
 
+import com.example.coducatif.R;
+
 
 public class course_activity extends AppCompatActivity {
 
@@ -14,7 +16,6 @@ public class course_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_actvity);
-
         // Définir des actions pour chaque carte de niveau
         CardView beginnerCard = findViewById(R.id.beginner_card);
         CardView intermediateCard = findViewById(R.id.intermediate_card);

@@ -1,7 +1,5 @@
 package com.example.coducatif_acceuil;
 
-import static com.example.coducatif_acceuil.R.*;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.coducatif.R;
 
 public class course_course extends AppCompatActivity {
 

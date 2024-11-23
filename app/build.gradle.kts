@@ -8,6 +8,11 @@ android {
 
     defaultConfig {
         applicationId = "com.example.coducatif_acceuil"
+    namespace = "com.example.coducatif"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.example.coducatif"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -39,5 +44,4 @@ dependencies {
     implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-}
+    androidTestImplementation(libs.espresso.core)}}

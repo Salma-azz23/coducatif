@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.coducatif_acceuil.R;
-import com.example.coducatif_acceuil.course_activity;
+import com.example.coducatif.R;
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

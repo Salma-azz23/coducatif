@@ -139,7 +139,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Section 01 - Introduction"
+                    android:text="Roadmap"
                     android:textColor="#000000"
                     android:textSize="14sp"
                     android:textStyle="bold" />

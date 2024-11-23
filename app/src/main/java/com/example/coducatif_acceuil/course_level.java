@@ -12,6 +12,8 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.coducatif.R;
+
 
 public class course_level extends AppCompatActivity {
 
