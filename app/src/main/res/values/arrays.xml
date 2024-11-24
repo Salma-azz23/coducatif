@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="course_list">
+        <item>React JS - Framework of JavaScript</item>
+        <item>Symfony - Framework of PHP</item>
+        <item>Laravel - Framework of PHP</item>
+        <item>Next.js - Advanced Framework Frontend</item>
+    </string-array>
+</resources>

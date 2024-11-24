@@ -15,7 +15,7 @@ public class MaineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_maine);
 
 
         TextView skipText = findViewById(R.id.skipText);
@@ -27,7 +27,9 @@ public class MaineActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.back_button).setOnClickListener(v -> {
+
+        findViewById(R.id.nextButton).setOnClickListener(v -> {
+
             Intent intent = new Intent(MaineActivity.this, SecondActivity.class);
             startActivity(intent);
             finish();

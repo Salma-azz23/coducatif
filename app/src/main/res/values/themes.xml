@@ -8,4 +8,9 @@
 
     <style name="Theme.Coducatifacceuil" parent="Base.Theme.Coducatifacceuil" />
     <style name="Theme.Coducatif" parent="Base.Theme.Coducatif" />
+    <style name="Theme.MyApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#2B7B8C</item>
+        <item name="colorPrimaryDark">#2B7B8C</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
 </resources>
