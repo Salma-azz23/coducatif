@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".Quiz1Partie1Activity">
+    tools:context=".quiz3Partie2Activity">
 
     <TextView
         android:id="@+id/questionCounter"
@@ -14,7 +14,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="16dp"
-        android:text="2/5"
+        android:text="4/5"
         android:textColor="#666666"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
         android:gravity="center"
-        android:text="Dans ReactJS, les props peuvent être utilisés pour passer des________"
+        android:text="Quel port est le port par défaut où le webpack-dev-server s’exécutera?"
         android:textColor="#333333"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/questionCounter"
@@ -68,9 +68,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="propriétés au composant"
+                    android:text="8000"
 
-"
+
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -106,8 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="gestionnaires d’événements au composant"
-                    android:textColor="#333333"
+                    android:text="3000"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -141,7 +140,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Les deux sont vrais."
+                    android:text="8080"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -177,7 +176,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Aucune de ces réponses n’est vraie."
+                    android:text="3306"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 

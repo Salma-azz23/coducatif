@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:app/src/main/java/com/example/coducatif/quiz1Partie2Activity.java
+
 package com.example.coducatif;
 
 import android.os.Bundle;
