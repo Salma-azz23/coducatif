@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class IntroActivity extends AppCompatActivity {
+import com.example.coducatif_acceuil.R;
+
+public class intro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -13,7 +15,7 @@ public class IntroActivity extends AppCompatActivity {
 
         ImageButton nextButton = findViewById(R.id.nextButton);
         nextButton.setOnClickListener(view -> {
-            Intent intent = new Intent(IntroActivity.this, Intro1Activity.class);
+            Intent intent = new Intent(intro.this, com.example.coducatif.intro1.class);
             startActivity(intent);
         });
     }
