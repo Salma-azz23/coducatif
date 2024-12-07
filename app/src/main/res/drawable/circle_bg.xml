@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circle_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#FFFFFF"/> <!-- Couleur de fond (blanche) -->
+    <corners android:radius="36dp"/> <!-- Rayon pour un cercle -->
+</shape>

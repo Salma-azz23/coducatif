@@ -1,4 +1,4 @@
-package com.example.coducatif_acceuil;
+package com.example.coducatif;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.coducatif.R;
+import com.example.coducatif_acceuil.R;
 
 public class roadmap extends AppCompatActivity {
 
@@ -23,6 +23,5 @@ public class roadmap extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
-    }
-}
+        };
+}}

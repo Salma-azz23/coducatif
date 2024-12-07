@@ -24,16 +24,16 @@
 
         <!-- Les autres activités -->
         <activity
-            android:name=".roadmap"
+            android:name="com.example.coducatif.roadmap"
             android:exported="false" />
         <activity
-            android:name=".course_activity"
+            android:name="com.example.coducatif.course_activity"
             android:exported="true" />
         <activity
-            android:name=".course_course"
+            android:name="com.example.coducatif.course_course"
             android:exported="false" />
         <activity
-            android:name=".course_level"
+            android:name="com.example.coducatif.course_level"
             android:exported="false" />
         <activity
             android:name=".quiz3Partiz2Activity"

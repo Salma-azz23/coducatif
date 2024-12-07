@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.coducatif.R;
+import com.example.coducatif.course_activity;
 
 public class MainActivity extends AppCompatActivity {
 

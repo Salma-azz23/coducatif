@@ -1,4 +1,4 @@
-package com.example.coducatif_acceuil;
+package com.example.coducatif;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 import android.widget.ImageView;
 
 import com.example.coducatif.R;
+import com.example.coducatif_acceuil.R;
 
 
 public class course_activity extends AppCompatActivity {

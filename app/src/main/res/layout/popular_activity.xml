@@ -57,11 +57,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#2B7B8C"
-                android:text="React JS" />
+                android:text="React JS avancé" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
                 android:backgroundTint="#E8F1FF"
                 android:text="Java Script"
                 android:textColor="#202244" />
