@@ -51,7 +51,7 @@ public class quiz5Partie2Activity extends AppCompatActivity {
                 Toast.makeText(quiz5Partie2Activity.this, "Succès", Toast.LENGTH_SHORT).show();
 
                 // Redirige vers la page suivante
-                Intent intent = new Intent(quiz5Partie2Activity.this, quiz4Partie2Activity.class); // Remplace NextActivity par la suivante dans le quiz
+                Intent intent = new Intent(quiz5Partie2Activity.this, course_completedActivity.class); // Remplace NextActivity par la suivante dans le quiz
                 startActivity(intent);
                 finish(); // Termine l'activité actuelle
             } else {
