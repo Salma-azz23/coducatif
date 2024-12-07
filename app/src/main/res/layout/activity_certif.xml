@@ -54,7 +54,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/button"
+        android:background="@drawable/dowland"
         android:contentDescription="Button" />
 
 
