@@ -29,6 +29,7 @@
                 android:fontFamily="sans-serif-medium" />
 
             <ImageView
+                android:id="@+id/invite_friends_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/baseline_person_add_alt_1_24"
@@ -121,6 +122,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/start_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="START"
@@ -148,6 +150,7 @@
                 android:fontFamily="sans-serif-medium" />
 
             <TextView
+                android:id="@+id/see_all_popular_courses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="See All >>"
@@ -173,6 +176,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/interactive_ui_card"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -311,6 +315,7 @@
                 android:fontFamily="sans-serif-medium" />
 
             <TextView
+                android:id="@+id/see_all_mentors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="See All >>"

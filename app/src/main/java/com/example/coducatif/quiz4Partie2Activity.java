@@ -1,20 +1,16 @@
 package com.example.coducatif;
 
-
-
-import com.example.coducatif_acceuil.R;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import com.example.coducatif_acceuil.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class quiz3Partie1Activity extends AppCompatActivity {
+public class quiz4Partie2Activity extends AppCompatActivity {
 
     private RadioGroup optionsGroup;
     private RadioButton selectedOption;
@@ -22,13 +18,13 @@ public class quiz3Partie1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz3_partie1);
+        setContentView(R.layout.activity_quiz4_partie2);
 
         // Initialisation des vues
         optionsGroup = findViewById(R.id.optionsGroup);
 
         // Ajouter le gestionnaire pour le bouton suivant
-        findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkAnswer(); // Appelle la méthode pour vérifier la réponse
@@ -45,26 +41,25 @@ public class quiz3Partie1Activity extends AppCompatActivity {
             selectedOption = findViewById(selectedId);
 
             // Réponse correcte
-            String correctAnswer = "DOM virtuel";
+            String correctAnswer = "8080";
 
             // Réponse utilisateur
             String userAnswer = selectedOption.getText().toString();
 
             if (userAnswer.equalsIgnoreCase(correctAnswer)) { // Vérifie la réponse
                 // Affiche le message "Succès"
-                Toast.makeText(quiz3Partie1Activity.this, "Succès", Toast.LENGTH_SHORT).show();
+                Toast.makeText(quiz4Partie2Activity.this, "Succès", Toast.LENGTH_SHORT).show();
 
                 // Redirige vers la page suivante
-                Intent intent = new Intent(quiz3Partie1Activity.this, quiz4Partie1Activity.class);
+                Intent intent = new Intent(quiz4Partie2Activity.this, quiz5Partie2Activity.class); // Remplace NextActivity par la suivante dans le quiz
                 startActivity(intent);
                 finish(); // Termine l'activité actuelle
             } else {
                 // Affiche le message "Faux"
-                Toast.makeText(quiz3Partie1Activity.this, "Faux", Toast.LENGTH_SHORT).show();
+                Toast.makeText(quiz4Partie2Activity.this, "Faux", Toast.LENGTH_SHORT).show();
             }
         } else {
             // Demande à l'utilisateur de sélectionner une option
-            Toast.makeText(quiz3Partie1Activity.this, "Veuillez sélectionner une option", Toast.LENGTH_SHORT).show();
+            Toast.makeText(quiz4Partie2Activity.this, "Veuillez sélectionner une option", Toast.LENGTH_SHORT).show();
         }
-    }
-}
+    }}

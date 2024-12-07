@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".Quiz1Partie1Activity">
+    tools:context="com.example.coducatif.quiz2Partie2Activity">
 
     <TextView
         android:id="@+id/questionCounter"
@@ -69,8 +69,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="propriétés au composant"
-
-"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 

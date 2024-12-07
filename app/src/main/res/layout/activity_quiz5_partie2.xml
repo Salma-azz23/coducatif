@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".quiz3Partie2Activity">
+    tools:context="com.example.coducatif.quiz5Partie2Activity">
 
     <TextView
         android:id="@+id/questionCounter"
@@ -68,7 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" state & props
+                    android:text=" state et props
 
 "
                     android:textColor="#333333"
@@ -106,7 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" services & components"
+                    android:text=" services et components"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -177,7 +177,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" props & components"
+                    android:text=" props et components"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 

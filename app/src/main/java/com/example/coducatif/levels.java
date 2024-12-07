@@ -7,16 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.widget.ImageView;
 
-import com.example.coducatif.R;
 import com.example.coducatif_acceuil.R;
 
 
-public class course_activity extends AppCompatActivity {
+public class levels extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course_actvity);
+        setContentView(R.layout.activity_levels);
         // Définir des actions pour chaque carte de niveau
         CardView beginnerCard = findViewById(R.id.beginner_card);
         CardView intermediateCard = findViewById(R.id.intermediate_card);
@@ -27,7 +26,7 @@ public class course_activity extends AppCompatActivity {
         beginnerCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(course_activity.this, course_level.class);
+                Intent intent = new Intent(levels.this, course_crcq.class);
                 intent.putExtra("level", "Beginner");
                 startActivity(intent);
             }
@@ -37,7 +36,7 @@ public class course_activity extends AppCompatActivity {
         intermediateCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(course_activity.this, course_level.class);
+                Intent intent = new Intent(levels.this, course_crcq.class);
                 intent.putExtra("level", "Intermediate");
                 startActivity(intent);
             }
@@ -47,7 +46,7 @@ public class course_activity extends AppCompatActivity {
         advancedCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(course_activity.this, course_level.class);
+                Intent intent = new Intent(levels.this, course_crcq.class);
                 intent.putExtra("level", "Advanced");
                 startActivity(intent);
             }
@@ -57,7 +56,7 @@ public class course_activity extends AppCompatActivity {
         expertCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(course_activity.this, course_level.class);
+                Intent intent = new Intent(levels.this, course_crcq.class);
                 intent.putExtra("level", "Expert");
                 startActivity(intent);
             }

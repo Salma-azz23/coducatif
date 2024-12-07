@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".quiz3Partie2Activity">
+    tools:context="com.example.coducatif.quiz3Partiz2Activity">
 
     <TextView
         android:id="@+id/questionCounter"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
         android:gravity="center"
-        android:text=". Les Props dans React peuvent________"
+        android:text="Que fait la commande « webpack »?"
         android:textColor="#333333"
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/questionCounter"
@@ -68,9 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Être modifié à l’intérieur du composant
-
-"
+                    android:text="Transforme tout le Javascript en un seul fichier"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -106,7 +104,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" Ne pas être modifié dans le composant"
+                    android:text="Exécute le serveur de développement local React."
                     android:textColor="#333333"
                     android:textSize="16sp" />
 
@@ -141,7 +139,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text=" Être modifié dans d’autre composant"
+                    android:text=" Un module bundler"
                     android:textColor="#333333"
                     android:textSize="16sp" />
 

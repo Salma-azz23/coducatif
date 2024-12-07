@@ -12,17 +12,17 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.example.coducatif.R;
+import com.example.coducatif_acceuil.R;
 import com.example.coducatif_acceuil.R;
 
 
-public class course_level extends AppCompatActivity {
+public class course_crcq extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_course_level);
+        setContentView(R.layout.activity_course_crcq);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -47,7 +47,7 @@ public class course_level extends AppCompatActivity {
         CardView courseCard = findViewById(R.id.course_card);
         courseCard.setOnClickListener(v -> {
             // Naviguer vers l'activité Course
-            Intent intent = new Intent(course_level.this, course_course.class);
+            Intent intent = new Intent(course_crcq.this, course_content.class);
             startActivity(intent);
         });
 
@@ -55,7 +55,7 @@ public class course_level extends AppCompatActivity {
         CardView roadmapCard = findViewById(R.id.roadmap_card);
         roadmapCard.setOnClickListener(v -> {
             // Naviguer vers l'activité Roadmap
-            Intent intent = new Intent(course_level.this, course_course.class);
+            Intent intent = new Intent(course_crcq.this, course_content.class);
             startActivity(intent);
         });
     }

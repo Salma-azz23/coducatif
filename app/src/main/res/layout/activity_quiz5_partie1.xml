@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".Quiz1Partie1Activity">
+    tools:context="com.example.coducatif.quiz5Partie1Activity">
 
     <TextView
         android:id="@+id/questionCounter"
@@ -14,7 +14,7 @@
         android:layout_height="16dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="16dp"
-        android:text="5/10"
+        android:text="4/5"
         android:textColor="#666666"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"Bibliothèque Javascript
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Dans js/components/"
                     android:textColor="#333333"
