@@ -9,7 +9,7 @@ public class Course {
         private int imageResource;
 
         // Constructeur
-        public Course(String category, String name, String price, String rating, int imageResource) {
+        public Course(String category, String name, String price, String rating) {
             this.category = category;
             this.name = name;
             this.price = price;
