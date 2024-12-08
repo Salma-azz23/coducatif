@@ -8,10 +8,12 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import
 
 
-public class Quiz1Partie1Activity extends AppCompatActivity {
+import com.example.coducatif.R;
+
+
+public class    Quiz1Partie1Activity extends AppCompatActivity {
 
     private RadioGroup optionsGroup;
     private RadioButton selectedOption;

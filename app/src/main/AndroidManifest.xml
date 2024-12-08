@@ -27,16 +27,16 @@
             </intent-filter>
         </activity> <!-- Les autres activités -->
         <activity
-            android:name=".roadmap"
+            android:name="com.example.coducatif.roadmap"
             android:exported="false" />
         <activity
-            android:name=".course_activity"
+            android:name="com.example.coducatif.levels"
             android:exported="true" />
         <activity
-            android:name=".course_course"
+            android:name="com.example.coducatif.course_content"
             android:exported="false" />
         <activity
-            android:name=".course_level"
+            android:name="com.example.coducatif.course_crcq"
             android:exported="false" />
         <activity
             android:name=".quiz2Partie2Activity"

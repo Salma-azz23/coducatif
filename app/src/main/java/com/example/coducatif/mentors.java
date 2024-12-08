@@ -1,29 +1,25 @@
-package com.example.coducatif.;
+package com.example.coducatif;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.coducatif_acceuil.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class mentors extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mentors); // Remplacez par le nom correct de votre fichier XML
+        setContentView(R.layout.mentors);
 
         // Initialiser les vues
-        ImageView backButton = findViewById(R.id.backButton);
+        ImageView backButton = findViewById(R.id.back_button);
         EditText searchMentors = findViewById(R.id.searchMentors);
         Button tabCourses = findViewById(R.id.tabcourses);
         Button tabMentors = findViewById(R.id.tabmentors);
@@ -73,20 +69,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "John clicked", Toast.LENGTH_SHORT).show();
         });
 
-        // Gérer les clics dans la barre de navigation en bas
-        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.nav_courses:
-                    Toast.makeText(this, "Search selected", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.nav_profile:
-                    Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
-                    return true;
-            }
-            return false;
-        });
+
     }
 }
+

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Exemple d'élément de menu -->
     <item
         android:id="@+id/action_search"
         android:icon="@drawable/baseline_search_24"
         android:title="Search"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
     <!-- Vous pouvez ajouter d'autres éléments ici -->
     <item
         android:id="@+id/action_settings"
-        android:icon="@drawable/baseline_settings_24"
         android:title="Settings"
-        android:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom" />
 
 </menu>
