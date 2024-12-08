@@ -3,7 +3,9 @@ package com.example.coducatif;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -43,20 +45,46 @@ public class course_crcq extends AppCompatActivity {
             // Terminer l'activité actuelle
             finish();
         });
-        // Carte Course
-        CardView courseCard = findViewById(R.id.course_card);
-        courseCard.setOnClickListener(v -> {
-            // Naviguer vers l'activité Course
-            Intent intent = new Intent(course_crcq.this, course_content.class);
-            startActivity(intent);
+        // Initialisation des cartes
+        LinearLayout courseCard = findViewById(R.id.course_card);
+        LinearLayout roadmapCard = findViewById(R.id.roadmap_card);
+        LinearLayout quizCard = findViewById(R.id.quiz_card);
+        LinearLayout communityCard = findViewById(R.id.community_card);
+
+        // Redirection vers "activity_course_content"
+        courseCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(course_crcq.this, course_content.class); // Classe CourseContent
+                startActivity(intent);
+            }
         });
 
-        // Carte Roadmap
-        CardView roadmapCard = findViewById(R.id.roadmap_card);
-        roadmapCard.setOnClickListener(v -> {
-            // Naviguer vers l'activité Roadmap
-            Intent intent = new Intent(course_crcq.this, course_content.class);
-            startActivity(intent);
+        // Redirection vers "activity_roadmap"
+        roadmapCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(course_crcq.this, roadmap.class); // Classe Roadmap
+                startActivity(intent);
+            }
+        });
+
+        // Redirection vers "Quiz1Partie1Activity"
+        quizCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(course_crcq.this, Quiz1Partie1Activity.class); // Classe Quiz1Partie1Activity
+                startActivity(intent);
+            }
+        });
+
+        // Redirection vers "InviteFriendsActivity"
+        communityCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(course_crcq.this, InviteFriendsActivity.class); // Classe InviteFriendsActivity
+                startActivity(intent);
+            }
         });
     }
 }

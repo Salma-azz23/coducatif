@@ -3,6 +3,7 @@ package com.example.coducatif;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.coducatif_acceuil.R;
 
 
 public class FourthActivity extends AppCompatActivity {

@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.coducatif_acceuil.R;
 
-public class Roadmap extends AppCompatActivity {
+public class roadmap extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
