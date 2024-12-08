@@ -73,6 +73,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                     android:id="@+id/option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/baseline_radio_button_unchecked_24"
@@ -109,6 +110,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
+                     android:id="@+id/option2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/baseline_radio_button_unchecked_24"
@@ -144,7 +146,7 @@
                     android:textSize="16sp" />
 
                 <RadioButton
-
+                  android:id="@+id/option3"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -181,7 +183,7 @@
 
                 <RadioButton
 
-
+                    android:id="@+id/option4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/baseline_radio_button_unchecked_24"
