@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.coducatif_acceuil.R;
+import com.example.coducatif.R;
 
-public class ActivityAcceuil extends AppCompatActivity {
+public class acceuil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class ActivityAcceuil extends AppCompatActivity {
         inviteFriendsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAcceuil.this, InviteFriendsActivity.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, InviteFriendsActivity.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class ActivityAcceuil extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAcceuil.this, course_crcq.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, course_crcq.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class ActivityAcceuil extends AppCompatActivity {
         seeAllPopularCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAcceuil.this, popular_courses.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, popular_courses.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class ActivityAcceuil extends AppCompatActivity {
         interactiveUICard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAcceuil.this, levels.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, levels.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });
@@ -66,7 +66,7 @@ public class ActivityAcceuil extends AppCompatActivity {
         seeAllMentors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAcceuil.this, mentors.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, mentors.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });

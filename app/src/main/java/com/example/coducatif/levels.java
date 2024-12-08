@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import android.widget.ImageView;
 
-import com.example.coducatif_acceuil.R;
+import com.example.coducatif.R;
 
 
 public class levels extends AppCompatActivity {

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.coducatif_acceuil.R;
+import com.example.coducatif.R;
 
 
 public class    Quiz1Partie1Activity extends AppCompatActivity {

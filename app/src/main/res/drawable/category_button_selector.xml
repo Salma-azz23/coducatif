@@ -15,7 +15,6 @@
         </shape>
     </item>
 
-        <item android:drawable="#2B7B8C" android:state_selected="true"/>
         <item android:drawable="@color/white" android:state_selected="false"/>
 
 </selector>

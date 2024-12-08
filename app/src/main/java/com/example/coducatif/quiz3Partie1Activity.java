@@ -2,7 +2,7 @@ package com.example.coducatif;
 
 
 
-import com.example.coducatif_acceuil.R;
+import com.example.coducatif.R;
 
 
 import android.content.Intent;

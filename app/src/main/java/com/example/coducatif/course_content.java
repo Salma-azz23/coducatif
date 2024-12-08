@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import com.example.coducatif_acceuil.R;
+import com.example.coducatif.R;
 
 public class course_content extends AppCompatActivity {
 
