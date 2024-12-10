@@ -48,7 +48,7 @@ public class acceuil extends AppCompatActivity {
         seeAllPopularCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, popular_courses.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, popularcourses.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });

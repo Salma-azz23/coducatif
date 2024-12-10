@@ -1,107 +1,681 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="8dp"
-    tools:context=".MainActivity">
+    android:background="#F9F9F9"
+    android:fillViewport="true">
 
-    <!-- Barre de recherche et catégories -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingVertical="8dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- Bouton retour -->
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:contentDescription="Back"
-            android:src="@drawable/baseline_arrow_back_24" />
-
-        <!-- Titre -->
-        <TextView
-            android:layout_width="0dp"
+        <!-- Alignement horizontal des trois éléments -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Popular Courses"
-            android:textColor="#2B7B8C"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-        <!-- Recherche -->
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:contentDescription="Search"
-            android:src="@drawable/baseline_search_24" />
+            <!-- Bouton retour à gauche -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Back"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <!-- Titre centré -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Popular Courses"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2B7B8C"
+                android:gravity="center"/>
+
+            <!-- Icône de recherche à droite -->
+            <ImageView
+                android:id="@+id/nav_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Search"
+                android:src="@drawable/baseline_search_24" />
+        </LinearLayout>
+
+        <!-- Onglets -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:text="All"
+                android:backgroundTint="#2B7B8C"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:text="Frontend"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#000000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:text="Backend"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#000000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Design"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Exemple de carte : React JS -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="5dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/course1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cap12"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Categorys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="React Js"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Courses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Framework of JavaScript"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Prices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="4dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/course2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/sf1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Symfony"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Framework of PHP"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="4dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/laravel"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laravel"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Framework of PHP"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="4dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/next"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="next JS"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="advanced framework-frontend"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="4dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/sap"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SAP ERP"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="système de planification des ressources d'entreprise"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:cardElevation="4dp"
+            android:cardCornerRadius="8dp"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Course Image -->
+                <ImageView
+                    android:id="@+id/courseImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/spring"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Course Image"
+                    android:background="@drawable/rounded_button"
+                    android:elevation="2dp" />
+
+                <!-- Course Information -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/Category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spring"
+                        android:textColor="#FF5722"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/category_background"
+                        android:padding="4dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Course Name -->
+                    <TextView
+                        android:id="@+id/Course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Framework of Java"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <!-- Price and Rating -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7058/-"
+                            android:textColor="#2B7B8C"
+                            android:textSize="14sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:id="@+id/Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.2   |   7830 Std"
+                            android:textColor="#888"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bookmark Icon -->
+                <ImageView
+                    android:id="@+id/bookmark"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_bookmark_24"
+                    android:contentDescription="Bookmark"
+                    android:tint="#888"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Autres cartes et navigation en bas -->
+
     </LinearLayout>
 
-    <!-- Filtres (Catégories) -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="8dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!-- Boutons de catégorie -->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#2B7B8C"
-                android:text="React JS avancé" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15px"
-                android:backgroundTint="#E8F1FF"
-                android:text="Java Script"
-                android:textColor="#202244" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#E8F1FF"
-                android:text="Laravel"
-                android:textColor="#202244" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#E8F1FF"
-                android:text="Symfony"
-                android:textColor="#202244" />
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="700dp"
-         android:layout_marginTop="2dp"
-         android:padding="16dp"
-         tools:listitem="@layout/item_course"
-         android:visibility="visible"/>
-
-    <!-- BottomNavigationView -->
+</ScrollView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:itemIconTint="#2B7B8C"
         app:itemTextColor="#2B7B8C"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navigation_menu" />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
