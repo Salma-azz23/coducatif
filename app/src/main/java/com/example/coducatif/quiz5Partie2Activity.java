@@ -1,19 +1,21 @@
 package com.example.coducatif;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-import com.example.coducatif.R;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import com.example.coducatif_acceuil.R;
+
 
 public class quiz5Partie2Activity extends AppCompatActivity {
 
     private RadioGroup optionsGroup;
-    private RadioButton selectedOption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,34 +35,47 @@ public class quiz5Partie2Activity extends AppCompatActivity {
     }
 
     private void checkAnswer() {
+        // Réponse correcte
+        String correctAnswer = "state et props";
+
         // Récupère l'ID de l'option sélectionnée
         int selectedId = optionsGroup.getCheckedRadioButtonId();
 
         if (selectedId != -1) {
-            // Identifie l'option choisie
-            selectedOption = findViewById(selectedId);
+            RadioButton selectedOption = findViewById(selectedId);
 
-            // Réponse correcte
-            String correctAnswer = " state et props";
+            // Récupérer le parent `CardView` de l'option sélectionnée
+            CardView selectedCardView = (CardView) selectedOption.getParent().getParent();
 
             // Réponse utilisateur
             String userAnswer = selectedOption.getText().toString();
 
-            if (userAnswer.equalsIgnoreCase(correctAnswer)) { // Vérifie la réponse
-                // Affiche le message "Succès"
+            if (userAnswer.equalsIgnoreCase(correctAnswer)) {
+                // Si la réponse est correcte, mettre la carte en vert
+                selectedCardView.setCardBackgroundColor(Color.parseColor("#4CAF50"));
                 Toast.makeText(quiz5Partie2Activity.this, "Succès", Toast.LENGTH_SHORT).show();
 
                 // Redirige vers la page suivante
-                Intent intent = new Intent(quiz5Partie2Activity.this, course_completedActivity.class); // Remplace NextActivity par la suivante dans le quiz
+                Intent intent = new Intent(quiz5Partie2Activity.this, course_completedActivity.class);
                 startActivity(intent);
                 finish(); // Termine l'activité actuelle
             } else {
-                // Affiche le message "Faux"
+                // Si la réponse est incorrecte, mettre la carte en rouge
+                selectedCardView.setCardBackgroundColor(Color.parseColor("#F44336"));
                 Toast.makeText(quiz5Partie2Activity.this, "Faux", Toast.LENGTH_SHORT).show();
             }
+
+            // Désactiver toutes les options après validation
+            for (int i = 0; i < optionsGroup.getChildCount(); i++) {
+                View child = optionsGroup.getChildAt(i);
+                if (child instanceof CardView) {
+                    child.setEnabled(false);
+                }
+            }
         } else {
-            // Demande à l'utilisateur de sélectionner une option
+            // Aucun élément sélectionné
             Toast.makeText(quiz5Partie2Activity.this, "Veuillez sélectionner une option", Toast.LENGTH_SHORT).show();
         }
-    }}
+    }
+}
 
