@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class Popularactivity extends AppCompatActivity {
+public class popularactivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Popularactivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Lancer l'activité LevelsActivity
-                Intent intent = new Intent(Popularactivity.this, levels.class);
+                Intent intent = new Intent(popularactivity.this, course_crcq.class);
                 startActivity(intent);
             }
         });

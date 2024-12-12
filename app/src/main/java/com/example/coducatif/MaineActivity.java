@@ -1,39 +1,23 @@
 package com.example.coducatif;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.coducatif.R;
-
 
 public class MaineActivity extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maine);
+        setContentView(R.layout.activity_maine); // Assurez-vous que le fichier XML s'appelle `activity_main.xml`
 
-
-        TextView skipText = findViewById(R.id.skipText);
-        skipText.setOnClickListener(v -> {
-
-            Intent intent = new Intent(MaineActivity.this, SecondActivity.class);
+        // Handler pour exécuter une action après 5 secondes (5000 millisecondes)
+        new Handler().postDelayed(() -> {
+            // Rediriger vers l'activité IntroActivity
+            Intent intent = new Intent(MaineActivity.this, IntroActivity.class);
             startActivity(intent);
-            finish();
-        });
-
-
-
-        findViewById(R.id.nextButton).setOnClickListener(v -> {
-
-            Intent intent = new Intent(MaineActivity.this, SecondActivity.class);
-            startActivity(intent);
-            finish();
-        });
+            finish(); // Termine l'activité actuelle pour ne pas revenir en arrière
+        }, 5000); // 5 secondes
     }
 }
-

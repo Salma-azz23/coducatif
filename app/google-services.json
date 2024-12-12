@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55365957525",
+    "project_id": "coduacatif",
+    "storage_bucket": "coduacatif.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55365957525:android:46ee893d1ece965e09289c",
+        "android_client_info": {
+          "package_name": "com.example.coducatif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKWHm8C0RGQpFZcfjMDaJPj-k192I2pS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
