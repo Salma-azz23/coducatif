@@ -55,9 +55,7 @@
         <activity
             android:name=".quiz4Partie1Activity"
             android:exported="false" />
-        <activity
-            android:name=".quiz1Partie2Activity"
-            android:exported="false" />
+
 
         <activity
             android:name=".course_completedActivity"
