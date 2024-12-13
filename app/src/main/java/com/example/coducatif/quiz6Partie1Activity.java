@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import com.example.coducatif_acceuil.R;
 
 public class quiz6Partie1Activity extends AppCompatActivity {
 

@@ -106,8 +106,9 @@
             android:padding="5dp"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
-
             android:textStyle="bold" />
+
+
     </LinearLayout>
 
     <ImageView
