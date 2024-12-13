@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-import com.example.coducatif_acceuil.R;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class quiz3Partiz2Activity extends AppCompatActivity {
