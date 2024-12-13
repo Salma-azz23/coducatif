@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-<<<<<<< HEAD
-        <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-<<<<<<< Updated upstream
-        <option name="gradleJvm" value="17" />
-=======
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-8.7-bin/gradle-8.7" />
-        <option name="gradleJvm" value="jbr-17" />
->>>>>>> df217049c920be715c2a5e3e89d1f25109acf98e
-=======
-        <option name="gradleJvm" value="#JAVA_HOME" />
->>>>>>> Stashed changes
+        <option name="gradleJvm" value="21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
