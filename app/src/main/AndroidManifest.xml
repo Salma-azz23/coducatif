@@ -45,7 +45,9 @@
         <activity
             android:name=".quiz1Partie2Activity"
             android:exported="false" />
-
+        <activity
+            android:name=".acceuil"
+            android:exported="false" />
         <activity
             android:name=".quiz6Partie1Activity"
             android:exported="false" />
@@ -82,6 +84,8 @@
         <activity android:name=".MainActivity"
             android:exported="false"/>
         <activity android:name=".FillProfileActivity"
+            android:exported="false"/>
+        <activity android:name=".PinActivity"
             android:exported="false"/>
 
         <activity android:name=".Intro2Activity"
