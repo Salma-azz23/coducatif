@@ -5,11 +5,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.Cursor;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 public class FillProfileActivity extends AppCompatActivity {
 
     private EditText fullNameEditText, nickNameEditText, dobEditText, emailEditText, phoneEditText;
@@ -33,25 +30,34 @@ public class FillProfileActivity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Récupération des valeurs des champs
                 String fullName = fullNameEditText.getText().toString();
                 String nickName = nickNameEditText.getText().toString();
                 String dob = dobEditText.getText().toString();
                 String email = emailEditText.getText().toString();
                 String phone = phoneEditText.getText().toString();
 
+                // Vérification que tous les champs sont remplis
                 if (fullName.isEmpty() || nickName.isEmpty() || dob.isEmpty() || email.isEmpty() || phone.isEmpty()) {
                     Toast.makeText(FillProfileActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
                 } else {
+                    // Vérification si l'utilisateur existe déjà dans la base de données
                     if (dbHelper.checkUser(email)) {
                         Toast.makeText(FillProfileActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
                     } else {
+                        // Ajout de l'utilisateur avec un mot de passe par défaut
                         dbHelper.addUser(email, "defaultPassword");
-                        int userId = getUserIdByEmail(email);
+                        int userId = dbHelper.getUserIdByEmail(email);  // Appel de la méthode dans DBHelper
 
+                        // Si l'utilisateur a bien été ajouté, on crée son profil
                         if (userId != -1) {
                             dbHelper.addProfile(userId, fullName, nickName, dob, phone);
                             Toast.makeText(FillProfileActivity.this, "Profil créé avec succès", Toast.LENGTH_SHORT).show();
-                            finish();
+
+                            // Création de l'intent pour naviguer vers PinActivity
+                            Intent intent = new Intent(FillProfileActivity.this, PinActivity.class);
+                            startActivity(intent); // Lancement de l'activité PinActivity
+                            finish(); // Facultatif: vous pouvez fermer cette activité si vous le souhaitez
                         } else {
                             Toast.makeText(FillProfileActivity.this, "Erreur lors de la création du profil", Toast.LENGTH_SHORT).show();
                         }
@@ -59,20 +65,6 @@ public class FillProfileActivity extends AppCompatActivity {
                 }
             }
         });
-    }
 
-    private int getUserIdByEmail(String email) {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT id FROM " + dbHelper.getUsersTableName() + " WHERE email=?", new String[]{email});
-        int userId = -1;
-
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                userId = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
-            }
-            cursor.close();
-        }
-        db.close();
-        return userId;
     }
 }

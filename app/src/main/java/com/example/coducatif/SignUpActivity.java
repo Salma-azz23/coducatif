@@ -57,8 +57,9 @@ public class SignUpActivity extends AppCompatActivity {
                     dbHelper.addUser(email, password);
                     Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
 
-                    // Passer à MainActivity
+                    // Passer à FillProfileActivity et envoyer l'email
                     Intent intent = new Intent(SignUpActivity.this, FillProfileActivity.class);
+                    intent.putExtra("email", email); // Passer l'email en extra
                     startActivity(intent);
                     finish();
                 } else {
@@ -66,5 +67,6 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

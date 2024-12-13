@@ -86,4 +86,33 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return exists;
     }
+    public void savePin(int userId, String pin) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("pin", pin); // Assurez-vous que la colonne "pin" existe dans votre table de profils
+
+        int rowsAffected = db.update("users", values, "id = ?", new String[]{String.valueOf(userId)});
+        if (rowsAffected == 0) {
+            // Si l'utilisateur n'a pas été trouvé, ajoutez un nouveau code PIN
+            values.put("user_id", userId);
+            db.insert("pins", null, values);
+        }
+        db.close();
+    }
+
+    // Récupérer l'ID de l'utilisateur par email
+    public int getUserIdByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id FROM " + USERS_TABLE + " WHERE email=?", new String[]{email});
+        int userId = -1;
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                userId = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+            }
+            cursor.close();
+        }
+        db.close();
+        return userId;
+    }
 }
