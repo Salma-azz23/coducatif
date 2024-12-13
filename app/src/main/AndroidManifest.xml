@@ -45,7 +45,9 @@
         <activity
             android:name=".quiz1Partie2Activity"
             android:exported="false" />
-
+        <activity
+            android:name=".acceuil"
+            android:exported="false" />
         <activity
             android:name=".quiz6Partie1Activity"
             android:exported="false" />

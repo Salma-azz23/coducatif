@@ -1,5 +1,6 @@
 package com.example.coducatif;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,11 +39,15 @@ public class PinActivity extends AppCompatActivity {
 
                 if (pin.length() == 4) {
                     // Enregistrer le code PIN dans la base de données
-                    // Pour cela, vous pouvez appeler une méthode dans votre DBHelper
-                    // dbHelper.savePin(pin);
+                    // dbHelper.savePin(pin); // Exemple pour sauvegarder le PIN
 
                     Toast.makeText(PinActivity.this, "PIN enregistré avec succès", Toast.LENGTH_SHORT).show();
-                    finish(); // Ferme l'activité et revient à l'écran précédent
+
+                    // Lancer l'activité d'accueil après l'enregistrement du PIN
+                    Intent intent = new Intent(PinActivity.this, acceuil.class);
+                    startActivity(intent);
+
+                    finish(); // Ferme l'activité actuelle (PinActivity)
                 } else {
                     Toast.makeText(PinActivity.this, "Veuillez entrer un code PIN valide", Toast.LENGTH_SHORT).show();
                 }
