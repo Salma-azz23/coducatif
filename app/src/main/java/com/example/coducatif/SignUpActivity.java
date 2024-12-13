@@ -37,9 +37,13 @@ public class SignUpActivity extends AppCompatActivity {
                         dbHelper.addUser(email, password);
                         Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
                         // Passer à la page de connexion
-                        Intent intent = new Intent(SignUpActivity.this, LoginInActivity.class);
-                        startActivity(intent);
-                        finish();
+                        public void redirectToSignIn(View view) {
+                            Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+                            startActivity(intent);
+                            finish();
+                        }
+
+
                     } else {
                         Toast.makeText(SignUpActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
                     }
