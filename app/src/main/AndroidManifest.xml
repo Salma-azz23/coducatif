@@ -80,6 +80,9 @@
             android:exported="false"/>
         <activity android:name=".Intro2Activity"
             android:exported="false"/>
+        <activity android:name=".SignUpActivity"
+            android:exported="false"/>
+
         <activity android:name=".popularactivity"
             android:exported="false"/>
 
