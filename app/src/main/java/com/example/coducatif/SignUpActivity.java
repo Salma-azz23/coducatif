@@ -40,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
                         Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
 
                         // Redirection vers la page de connexion
-                        redirectToSignIn();
+                        redirectToFillProfile();
                     } else {
                         Toast.makeText(SignUpActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
                     }
@@ -52,10 +52,12 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     // Méthode pour rediriger vers la page SignIN après une inscription réussie
-    public void redirectToSignIn() {
-        Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+    public void redirectToFillProfile() {
+
+        Intent intent = new Intent(SignUpActivity.this, FillProfileActivity.class);
         startActivity(intent);
         finish(); // Terminer l'activité actuelle
+
     }
 
     // Méthode associée au clic sur le TextView "LOG IN"
