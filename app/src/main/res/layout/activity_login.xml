@@ -88,13 +88,7 @@
             android:text="Remember Me"
             android:textColor="#545454" />
 
-        <TextView
-            android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="50dp"
-            android:text="Forgot Password?"
-            android:textColor="#545454" />
+
     </LinearLayout>
 
     <!-- Sign In Button -->

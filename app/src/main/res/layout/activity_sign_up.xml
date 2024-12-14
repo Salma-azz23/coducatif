@@ -81,7 +81,8 @@
         android:text="Already have an Account? LOG IN"
         android:textColor="#545454"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="redirectToSignIn"/>
 
 </LinearLayout>
 

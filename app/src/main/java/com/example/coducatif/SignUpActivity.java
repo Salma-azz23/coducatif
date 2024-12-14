@@ -19,12 +19,14 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        // Liaison des éléments XML au code Java
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         signUpButton = findViewById(R.id.sign_up_button);
 
         dbHelper = new DBHelper(this);
 
+        // Gestion du clic sur le bouton "Sign Up"
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,14 +38,9 @@ public class SignUpActivity extends AppCompatActivity {
                     if (!userExists) {
                         dbHelper.addUser(email, password);
                         Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
-                        // Passer à la page de connexion
-                        public void redirectToSignIn(View view) {
-                            Intent intent = new Intent(SignUpActivity.this, SignIN.class);
-                            startActivity(intent);
-                            finish();
-                        }
 
-
+                        // Redirection vers la page de connexion
+                        redirectToSignIn();
                     } else {
                         Toast.makeText(SignUpActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
                     }
@@ -53,7 +50,23 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
+    // Méthode pour rediriger vers la page SignIN après une inscription réussie
+    public void redirectToSignIn() {
+        Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+        startActivity(intent);
+        finish(); // Terminer l'activité actuelle
+    }
+
+    // Méthode associée au clic sur le TextView "LOG IN"
+    public void redirectToSignIn(View view) {
+        // Vérifie l'ID de la vue cliquée
+        if (view.getId() == R.id.sign_up_prompt) {
+            // Exécute l'action
+            Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
 }
-
-
-

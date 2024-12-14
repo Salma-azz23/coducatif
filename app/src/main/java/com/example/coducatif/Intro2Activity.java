@@ -8,24 +8,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Intro2Activity extends AppCompatActivity {
 
-    private Button getStartedButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro2); // Assurez-vous que le nom du layout XML est correct
+        setContentView(R.layout.activity_intro2); // Assurez-vous que le nom du fichier XML est correct
 
-        // Initialiser le bouton
-        getStartedButton = findViewById(R.id.sign_in_button);
+        // Trouver le bouton dans le layout
+        Button signInButton = findViewById(R.id.sign_in_button);  // Utiliser l'ID correct
 
-        // Définir un OnClickListener pour le bouton "Get Started"
-        getStartedButton.setOnClickListener(new View.OnClickListener() {
+        // Définir un écouteur de clics pour le bouton
+        signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Lancer SignUpActivity lorsqu'on clique sur le bouton
+                // Lancer l'activité SignUpActivity lorsque le bouton est cliqué
                 Intent intent = new Intent(Intro2Activity.this, SignUpActivity.class);
                 startActivity(intent);
-                finish(); // Terminer l'activité actuelle pour ne pas permettre de revenir à la page précédente
             }
         });
     }

@@ -82,8 +82,12 @@
             android:exported="false"/>
         <activity android:name=".SignUpActivity"
             android:exported="false"/>
+        <activity android:name=".SignIN"
+            android:exported="false"/>
 
         <activity android:name=".popularactivity"
+            android:exported="false"/>
+        <activity android:name=".acceuil"
             android:exported="false"/>
 
 
