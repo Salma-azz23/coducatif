@@ -2,4 +2,6 @@
 <resources>
     <item name="beginner_button" type="id" />
     <item name="skipText" type="id" />
+    <item name="beginner_card" type="id" />
+    <item name="advanced_card" type="id" />
 </resources>
