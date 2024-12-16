@@ -24,13 +24,11 @@ public class course_crcq extends AppCompatActivity {
         // Ajouter le comportement pour le bouton retour
         findViewById(R.id.back_button).setOnClickListener(v -> finish());
 
-        // Ajouter le clic pour rediriger vers "course_content"
-        findViewById(R.id.course_card).setOnClickListener(v -> {
-            Intent intent = new Intent(course_crcq.this, course_content.class); // Intent pour CourseContent
-            startActivity(intent); // Démarrer l'activité CourseContent
-        });
+
 
         // Associer chaque autre carte à une activité spécifique
+        findViewById(R.id.course_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, course_content.class)));
+
         findViewById(R.id.roadmap_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, roadmap.class)));
         findViewById(R.id.quiz_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, Quiz1Partie1Activity.class)));
         findViewById(R.id.community_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, InviteFriendsActivity.class)));
