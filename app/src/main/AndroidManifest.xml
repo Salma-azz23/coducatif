@@ -36,9 +36,8 @@
         <activity
             android:name="com.example.coducatif.course_content"
             android:exported="false" />
-        <activity
-            android:name="com.example.coducatif.course_crcq"
-            android:exported="false" />
+       <activity android:name=".course_crcq"
+           android:exported="false"/>
         <activity
             android:name=".quiz2Partie2Activity"
             android:exported="false" />
@@ -67,7 +66,7 @@
             android:name=".certifActivity"
             android:exported="false" />
         <activity
-            android:name=".Quiz1Partie1Activity"
+            android:name=".QuiZ1Partie1Activity"
             android:exported="false" />
 
 
@@ -87,10 +86,13 @@
 
         <activity android:name=".popularactivity"
             android:exported="false"/>
+        <activity android:name=".ScoreActivity"
+            android:exported="false"/>
         <activity android:name=".acceuil"
             android:exported="false"/>
         <activity android:name=".mentors"
             android:exported="false"/>
+
         <activity android:name=".FillProfileActivity" />
 
 
