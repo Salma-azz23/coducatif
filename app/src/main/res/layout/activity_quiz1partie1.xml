@@ -1,220 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
-    tools:context="com.example.coducatif.Quiz1Partie1Activity">
+    tools:context=".QuiZ1Partie1Activity">
 
+    <!-- Compteur de questions -->
     <TextView
         android:id="@+id/questionCounter"
-        android:layout_width="40dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="1/5"
-        android:textColor="#666666"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
 
-    <!-- Question du quiz -->
+    <!-- Texte de la question -->
     <TextView
         android:id="@+id/questionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="100dp"
-        android:gravity="center"
-        android:text="React est un"
-        android:textColor="#333333"
-        android:textSize="25sp"
+        android:text="Question Text"
+        android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@id/questionCounter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Groupe des options -->
-
-    <!-- Bouton Suivant -->
-    <RadioGroup
-        android:id="@+id/optionsGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/questionText">
+        android:layout_marginTop="32dp"
+        android:gravity="center"/>
 
-        <!-- Option 1 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Bibliothèque Javascript"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                     android:id="@+id/option1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/baseline_radio_button_unchecked_24"
-                    android:gravity="end"
-                    android:text=""
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Option 2 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Framework Javascript"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                     android:id="@+id/option2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/baseline_radio_button_unchecked_24"
-                    android:gravity="end"
-                    android:text=""
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Option 3 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Les deuxsont vrais"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-                <RadioButton
-
-                     android:id="@+id/option3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/baseline_radio_button_unchecked_24"
-                    android:gravity="end"
-                    android:text=""
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Aucune de ces réponses n’est vraie."
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-                <RadioButton
-
-                       android:id="@+id/option4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/baseline_radio_button_unchecked_24"
-                    android:gravity="end"
-                    android:text=""
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-    </RadioGroup>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/nextButton"
+    <!-- Option 1 - CardView pour la première option -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/optionCard1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#00796B"
-        android:text="Next"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:cornerRadius="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/questionText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <RadioGroup
+            android:id="@+id/optionsGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:padding="16dp"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Option 2 - CardView pour la deuxième option -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/optionCard2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/optionCard1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/optionsGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:padding="16dp"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Option 3 - CardView pour la troisième option -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/optionCard3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/optionCard2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/optionsGroup3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:padding="16dp"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Option 4 - CardView pour la quatrième option -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/optionCard4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/optionCard3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/optionsGroup4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 4"
+                android:padding="16dp"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton suivant -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suivant"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/optionCard4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#00796B" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
