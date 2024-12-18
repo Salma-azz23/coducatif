@@ -3,6 +3,7 @@ package com.example.coducatif;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,10 +36,14 @@ public class acceuil extends AppCompatActivity {
             }
         });
 
+
+
         // Redirection vers "activity_course_crcq.xml" lors du clic sur le bouton START
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("StartButton", "Button clicked");
+
                 Intent intent = new Intent(acceuil.this, course_crcq.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
