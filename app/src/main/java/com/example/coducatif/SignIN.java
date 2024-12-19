@@ -28,7 +28,7 @@ public class SignIN extends AppCompatActivity {
         googleLoginButton = findViewById(R.id.google_login);
         appleLoginButton = findViewById(R.id.apple_login);
 
-
+        // Initialisation de la base de données
         dbHelper = new DBHelper(this);
 
         // Gestion du clic sur le bouton "Sign In"
@@ -39,7 +39,8 @@ public class SignIN extends AppCompatActivity {
                 String password = passwordEditText.getText().toString().trim();
 
                 if (!email.isEmpty() && !password.isEmpty()) {
-                    boolean validLogin = dbHelper.checkUse(email, password);
+                    // Utilisation de la méthode correcte "checkUser"
+                    boolean validLogin = dbHelper.checkUser(email, password);
                     if (validLogin) {
                         Toast.makeText(SignIN.this, "Connexion réussie !", Toast.LENGTH_SHORT).show();
                         // Redirection vers une autre activité (HomeActivity par exemple)
