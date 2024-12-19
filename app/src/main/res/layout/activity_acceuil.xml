@@ -110,7 +110,8 @@
                     android:text="Introduction to React JS"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:fontFamily="sans-serif-medium"
+                    app:labelVisibilityMode="labeled"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,7 +158,7 @@
                 android:textColor="#2B7B8C"
                 android:textSize="14sp"
                 android:gravity="end"
-                android:layout_marginStart="170dp"
+                android:layout_marginStart="160dp"
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -186,7 +187,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="178dp"
+                        android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/htcs" />
 
@@ -201,7 +202,8 @@
                         android:padding="4dp"
                         android:text="React JS"
                         android:textColor="#FF5722"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        app:labelVisibilityMode="labeled"/>
 
                     <!-- Course Name -->
                     <TextView
@@ -212,7 +214,8 @@
                         android:text="Interactive UI Development"
                         android:textColor="#000"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        app:labelVisibilityMode="labeled"/>
 
                     <!-- Price and Rating -->
                     <LinearLayout
