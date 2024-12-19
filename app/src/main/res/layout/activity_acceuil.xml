@@ -239,13 +239,6 @@
                     android:layout_marginRight="8dp"
                     android:elevation="4dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="What would you like to learn Today?\nSearch Below."
-                        android:textColor="#333"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
