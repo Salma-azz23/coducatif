@@ -38,14 +38,6 @@
                 app:tint="#2B7B8C" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="What would you like to learn Today?\nSearch Below."
-            android:textColor="#333"
-            android:layout_marginBottom="16dp"
-            android:textSize="14sp" />
-
         <!-- Search Bar -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -178,15 +170,15 @@
                 <LinearLayout
                     android:id="@+id/interactive_ui_card"
                     android:layout_width="230dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
                     android:background="@drawable/card_bg"
-                    android:padding="16dp"
-                    android:layout_marginRight="8dp">
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="178dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/htcs" />
 
@@ -195,24 +187,24 @@
                         android:id="@+id/Category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/category_background"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="4dp"
                         android:text="React JS"
                         android:textColor="#FF5722"
-                        android:textSize="12sp"
-                        android:fontFamily="sans-serif-medium"
-                        android:background="@drawable/category_background"
-                        android:padding="4dp"
-                        android:layout_marginBottom="4dp" />
+                        android:textSize="12sp" />
 
                     <!-- Course Name -->
                     <TextView
                         android:id="@+id/Course"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
                         android:text="Interactive UI Development"
                         android:textColor="#000"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="6dp" />
+                        android:textStyle="bold" />
 
                     <!-- Price and Rating -->
                     <LinearLayout
@@ -224,10 +216,10 @@
                             android:id="@+id/Price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
                             android:text="7058/-"
                             android:textColor="#2B7B8C"
-                            android:textSize="14sp"
-                            android:layout_marginEnd="16dp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/Rating"
@@ -246,6 +238,14 @@
                     android:padding="16dp"
                     android:layout_marginRight="8dp"
                     android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="What would you like to learn Today?\nSearch Below."
+                        android:textColor="#333"
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"

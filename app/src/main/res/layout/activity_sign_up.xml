@@ -69,7 +69,8 @@
         android:textColor="#FFFFFF"
         android:drawableEnd="@drawable/ic_arrow_right"
         android:padding="5dp"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="redirectToFillProfile"/>
 
     <!-- Login Prompt -->
     <TextView
@@ -81,7 +82,8 @@
         android:text="Already have an Account? LOG IN"
         android:textColor="#545454"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="redirectToSignIn"/>
 
 </LinearLayout>
 

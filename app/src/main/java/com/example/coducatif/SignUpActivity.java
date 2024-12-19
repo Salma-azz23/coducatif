@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Patterns;
-
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText emailEditText, passwordEditText;
@@ -21,52 +19,56 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        // Liaison des éléments XML au code Java
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         signUpButton = findViewById(R.id.sign_up_button);
 
         dbHelper = new DBHelper(this);
 
+        // Gestion du clic sur le bouton "Sign Up"
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
+                String email = emailEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
 
-                // Vérifier si les champs ne sont pas vides
-                if (email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(SignUpActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                if (!email.isEmpty() && !password.isEmpty()) {
+                    boolean userExists = dbHelper.checkUser(email);
+                    if (!userExists) {
+                        dbHelper.addUser(email, password);
+                        Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
 
-                // Vérifier si l'email a un format valide
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    Toast.makeText(SignUpActivity.this, "Email invalide", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Vérifier si le mot de passe a une longueur suffisante
-                if (password.length() < 6) {
-                    Toast.makeText(SignUpActivity.this, "Le mot de passe doit contenir au moins 6 caractères", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Vérifier si l'utilisateur existe déjà
-                boolean userExists = dbHelper.checkUser(email);
-                if (!userExists) {
-                    dbHelper.addUser(email, password);
-                    Toast.makeText(SignUpActivity.this, "Utilisateur inscrit avec succès", Toast.LENGTH_SHORT).show();
-
-                    // Passer à FillProfileActivity et envoyer l'email
-                    Intent intent = new Intent(SignUpActivity.this, FillProfileActivity.class);
-                    intent.putExtra("email", email); // Passer l'email en extra
-                    startActivity(intent);
-                    finish();
+                        // Redirection vers la page de connexion
+                        redirectToFillProfile();
+                    } else {
+                        Toast.makeText(SignUpActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Toast.makeText(SignUpActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    // Méthode pour rediriger vers la page SignIN après une inscription réussie
+    public void redirectToFillProfile() {
+
+        Intent intent = new Intent(SignUpActivity.this, FillProfileActivity.class);
+        startActivity(intent);
+        finish(); // Terminer l'activité actuelle
 
     }
+
+    // Méthode associée au clic sur le TextView "LOG IN"
+    public void redirectToSignIn(View view) {
+        // Vérifie l'ID de la vue cliquée
+        if (view.getId() == R.id.sign_up_prompt) {
+            // Exécute l'action
+            Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
 }
