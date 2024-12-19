@@ -28,49 +28,38 @@ public class acceuil extends AppCompatActivity {
         LinearLayout interactiveUICard = findViewById(R.id.interactive_ui_card);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView seeAllMentors = findViewById(R.id.see_all_mentors);
 
-        // Redirection vers "activity_invite_friends.xml" lors du clic sur l'icône
+        // Redirection vers InviteFriendsActivity
         inviteFriendsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, InviteFriendsActivity.class); // Remplacez par le nom de votre activité
+                Intent intent = new Intent(acceuil.this, InviteFriendsActivity.class);
                 startActivity(intent);
             }
+                });
+
+// Redirection vers course_crcq
+        startButton.setOnClickListener(v -> {
+            Intent intent = new Intent(acceuil.this, course_crcq.class);
+            startActivity(intent);
         });
 
-        // Redirection vers "activity_course_crcq.xml" lors du clic sur le bouton START
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, course_crcq.class);
-                startActivity(intent);
-            }
+// Redirection vers popularcourses
+        seeAllPopularCourses.setOnClickListener(v -> {
+            Intent intent = new Intent(acceuil.this, popularactivity.class);
+            startActivity(intent);
         });
 
-        // Redirection vers "popular_activity.xml" lors du clic sur "See All" (Popular Courses)
-        seeAllPopularCourses.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, popularactivity.class);
-                startActivity(intent);
-            }
+// Redirection vers levels
+        interactiveUICard.setOnClickListener(v -> {
+            Intent intent = new Intent(acceuil.this, levels.class);
+            startActivity(intent);
         });
 
-        // Redirection vers "activity_levels.xml" lors du clic sur la carte Interactive UI Development
-        interactiveUICard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, levels.class);
-                startActivity(intent);
-            }
+// Redirection vers mentors
+        seeAllMentors.setOnClickListener(v -> {
+            Intent intent = new Intent(acceuil.this, mentors.class);
+            startActivity(intent);
         });
 
-        // Redirection vers "mentors.xml" lors du clic sur "See All" (Top Mentors)
-        seeAllMentors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(acceuil.this, mentors.class);
-                startActivity(intent);
-            }
-        });
     }
 }
