@@ -66,7 +66,7 @@
             android:name=".InviteFriendsActivity"
             android:exported="false" />
         <activity
-            android:name=".certifActivity"
+            android:name=".DBHelper$certifActivity"
             android:exported="false" />
         <activity
             android:name=".QuiZ1Partie1Activity"
