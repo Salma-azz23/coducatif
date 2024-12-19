@@ -39,6 +39,14 @@
         </LinearLayout>
 
         <!-- Search Bar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="What would you like to learn Today?\nSearch Below."
+            android:textColor="#333"
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -238,7 +246,6 @@
                     android:padding="16dp"
                     android:layout_marginRight="8dp"
                     android:elevation="4dp">
-
 
                     <ImageView
                         android:layout_width="match_parent"
