@@ -239,7 +239,6 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <!-- Image avec la barre et le bouton cliquable -->
                 <ImageView
                     android:layout_width="400dp"
                     android:layout_height="56dp"
