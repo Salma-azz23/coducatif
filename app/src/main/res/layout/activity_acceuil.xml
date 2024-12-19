@@ -37,13 +37,6 @@
                 android:scaleType="centerCrop"
                 app:tint="#2B7B8C" />
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="What would you like to learn Today?\nSearch Below."
-            android:textColor="#333"
-            android:textSize="14sp" />
 
         <!-- Search Bar -->
         <LinearLayout
@@ -54,7 +47,6 @@
             android:gravity="center"
             android:paddingHorizontal="12dp"
             android:elevation="4dp">
-
 
             <ImageView
                 android:layout_width="24dp"
@@ -178,7 +170,7 @@
                 <LinearLayout
                     android:id="@+id/interactive_ui_card"
                     android:layout_width="230dp"
-                    android:layout_height="208dp"
+                    android:layout_height="match_parent"
                     android:layout_marginRight="8dp"
                     android:background="@drawable/card_bg"
                     android:orientation="vertical"
@@ -186,7 +178,7 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="178dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/htcs" />
 
@@ -238,7 +230,6 @@
                             android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -248,7 +239,13 @@
                     android:layout_marginRight="8dp"
                     android:elevation="4dp">
 
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="What would you like to learn Today?\nSearch Below."
+                        android:textColor="#333"
+                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
