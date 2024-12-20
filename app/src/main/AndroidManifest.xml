@@ -94,6 +94,8 @@
             android:exported="false"/>
         <activity android:name=".mentors"
             android:exported="false"/>
+        <activity android:name=".PinActivity"
+            android:exported="false"/>
 
         <activity android:name=".FillProfileActivity" />
 
