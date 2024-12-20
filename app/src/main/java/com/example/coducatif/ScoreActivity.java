@@ -26,6 +26,7 @@ public class ScoreActivity extends AppCompatActivity {
         TextView scoreDisplayTextView = findViewById(R.id.scoreDisplayTextView);
         scoreDisplayTextView.setText("🎯 Votre score : " + score + "/" + totalQuestions);
 
+
         // Action du bouton Réessayer
         MaterialButton btnRetry = findViewById(R.id.btn_retry);
         btnRetry.setOnClickListener(v -> {
@@ -46,7 +47,7 @@ public class ScoreActivity extends AppCompatActivity {
         } else if (percentage >= 50) {
             return "Passable 🙂 Essayez encore pour mieux faire.";
         } else {
-            return "Peut mieux faire 😢 Ne vous découragez pas !";
+            return "Peut mieux faire Ne vous découragez pas !";
         }
     }
 }

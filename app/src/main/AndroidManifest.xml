@@ -96,7 +96,7 @@
             android:exported="false"/>
 
         <activity android:name=".FillProfileActivity" />
-
+        <activity android:name=".ChatActivity" />
 
 
     </application>
