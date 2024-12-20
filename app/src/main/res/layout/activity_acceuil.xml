@@ -18,12 +18,22 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_menu_24"
+                android:background="@drawable/circle_bg"
+                android:scaleType="centerCrop"
+                app:tint="#2B7B8C"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Menu" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hi, Student"
+                android:text=" Hi, Student 🎮"
                 android:textColor="#2B7B8C"
                 android:textSize="22sp"
                 android:fontFamily="sans-serif-medium" />
@@ -43,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="What would you like to learn Today?\nSearch Below."
+            android:text=" 🎮 Welcome To the Game Zone 🎮\n What would you like to learn 📒 Today?"
             android:textColor="#333"
             android:textSize="14sp" />
 
@@ -66,7 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="Search for.."
+                android:hint="Search for... 🎉🎮"
                 android:background="@null"
                 android:padding="8dp"
                 android:textColor="#000"
@@ -109,14 +119,15 @@
                     android:layout_height="wrap_content"
                     android:text="Introduction to React JS"
                     android:textColor="#000000"
-                    android:textSize="16sp"
+                    android:textSize="13sp"
                     android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
                     app:labelVisibilityMode="labeled"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0/10 Completed"
+                    android:text=" ⏺ 0/10 Completed"
                     android:textColor="#8A8A8A"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
@@ -126,7 +137,7 @@
                 android:id="@+id/start_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="START"
+                android:text="START 🎮"
                 android:textAllCaps="false"
                 android:backgroundTint="#2B7B8C"
                 android:textColor="#FFFFFF"
@@ -145,7 +156,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popular Courses"
+                android:text="Popular Courses &lt;📒/&gt;"
                 android:textColor="#2B7B8C"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium" />
@@ -154,11 +165,11 @@
                 android:id="@+id/see_all_popular_courses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See All >>"
+                android:text="See All🧐>>"
                 android:textColor="#2B7B8C"
                 android:textSize="14sp"
                 android:gravity="end"
-                android:layout_marginStart="160dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -312,7 +323,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Top Mentors"
+                android:text="Top Mentors👨‍🏫"
                 android:textColor="#2B7B8C"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium" />
@@ -321,12 +332,12 @@
                 android:id="@+id/see_all_mentors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See All >>"
+                android:text="See All 🧐>>"
                 android:textColor="#2B7B8C"
                 android:textSize="14sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginStart="200dp"
+                android:layout_marginStart="130dp"
                 android:layout_marginEnd="8dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -354,11 +365,12 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/john"
+                        android:src="@drawable/img1"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -381,10 +393,10 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/ka"
+                        android:src="@drawable/img2"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView
@@ -408,10 +420,10 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/yous"
+                        android:src="@drawable/img3"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView
@@ -435,10 +447,10 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/cap7"
+                        android:src="@drawable/img4"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView

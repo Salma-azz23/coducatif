@@ -3,79 +3,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F0F4FF">
+    android:background="#165562">
 
-    <!-- Bouton de retour en haut à gauche -->
-
-    <!-- Titre de la page -->
+    <!-- Title Section with Navigation -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
 
-        <!-- Flèche de retour -->
-
-
-
+        <!-- Back Button -->
         <ImageView
             android:id="@+id/back_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:contentDescription="Back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Retour"
             android:src="@drawable/ic_back_icon"
-            tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="0dp"
-            tools:ignore="MissingConstraints" />
+            android:tint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp" />
 
+        <!-- Title -->
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/back_button"
-            android:text="level"
-            android:textColor="#000000"
-            android:textSize="18sp"
+            android:text="Niveaux d'apprentissage"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="68dp"
-            tools:layout_editor_absoluteY="0dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@id/back_button"
+            app:layout_constraintEnd_toStartOf="@id/search_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
 
+        <!-- Search Icon -->
         <ImageView
             android:id="@+id/search_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="Search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Recherche"
             android:src="@drawable/ic_search"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:tint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Layout principal pour les cartes de niveaux -->
-
+    <!-- Main Layout for Level Cards -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
-        android:layout_marginTop="134dp"
+        android:layout_marginTop="104dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingHorizontal="24dp"
-        tools:ignore="NotSibling">
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
 
-        <!-- Carte niveau Beginner -->
-        <!-- Carte niveau Beginner -->
+        <!-- Beginner Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/beginner_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardBackgroundColor="#FFEB3B"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,29 +88,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Beginner"
-                    android:textColor="#2B7BBA"
-                    android:textSize="18sp"
+                    android:text="Débutant 🏁"
+                    android:textColor="#2E7D32"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Starter Level"
-                    android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:text="Niveau de départ"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Carte niveau Intermediate -->
+        <!-- Intermediate Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/intermediate_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardBackgroundColor="#4CAF50"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -121,29 +123,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Intermediate"
-                    android:textColor="#2B7BBA"
-                    android:textSize="18sp"
+                    android:text="Intermédiaire 🎮"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fundamentals"
-                    android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:text="Concepts fondamentaux"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Carte niveau Advanced -->
+        <!-- Advanced Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/advanced_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardBackgroundColor="#2196F3"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -155,28 +158,29 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Advanced"
-                    android:textColor="#2B7BBA"
-                    android:textSize="18sp"
+                    android:text="Avancé 🚀"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Skill Building"
-                    android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:text="Renforcement des compétences"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Carte niveau Expert -->
+        <!-- Expert Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/expert_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#9C27B0"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,17 +192,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Expert"
-                    android:textColor="#2B7BBA"
-                    android:textSize="18sp"
+                    android:text="Expert 🏆"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Challenge Zone"
-                    android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:text="Zone de défi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
