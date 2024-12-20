@@ -12,5 +12,7 @@
     <color name="priceColor">#FF5722</color>
     <color name="splashBackground">#B4BDC4</color>
 
+    <color name="colorAccent">#FF5722</color>
+
 
 </resources>
