@@ -171,30 +171,34 @@ public class acceuil extends AppCompatActivity {
         return 1; // Example: Return the user ID (adjust based on your actual data)
     }
 
-    // Method to get the full name from the database
     public String getFullName(int userId) {
-        DBHelper dbHelper = new DBHelper(this); // Créez une instance de DatabaseHelper
+        DBHelper dbHelper = new DBHelper(this);
         SQLiteDatabase db = null;
         Cursor cursor = null;
-        String fullName = "Student"; // Valeur par défaut si aucun nom n'est trouvé
-        
+        String fullName = "Student"; // Valeur par défaut
+
         try {
-            db = dbHelper.getReadableDatabase(); // Obtenir une base de données lisible
-            // Utilisez la méthode pour obtenir la base de données
-            cursor = db.rawQuery("SELECT full_name FROM " + PROFILE_TABLE + " WHERE user_id = ?", new String[]{String.valueOf(userId)});
+            db = dbHelper.getReadableDatabase(); // Ouvrir la base de données
+            Log.d("getFullName", "userId: " + userId);
+
+            cursor = db.rawQuery(
+                    "SELECT full_name FROM profiles WHERE user_id = ?",
+                    new String[]{String.valueOf(userId)}
+            );
 
             if (cursor != null && cursor.moveToFirst()) {
                 int fullNameColumnIndex = cursor.getColumnIndex("full_name");
-                if (fullNameColumnIndex >= 0) { // Vérifiez si la colonne 'full_name' existe
+                if (fullNameColumnIndex >= 0) {
                     fullName = cursor.getString(fullNameColumnIndex);
+                    Log.d("getFullName", "Full name found: " + fullName);
                 } else {
-                    Log.e("getFullName", "Colonne 'full_name' non trouvée");
+                    Log.e("getFullName", "Column 'full_name' not found in cursor");
                 }
             } else {
-                Log.e("getFullName", "Le curseur est nul ou aucune donnée trouvée");
+                Log.e("getFullName", "Cursor is null or no data found for userId: " + userId);
             }
         } catch (Exception e) {
-            Log.e("getFullName", "Erreur lors de la récupération du nom complet", e);
+            Log.e("getFullName", "Error fetching full name", e);
         } finally {
             if (cursor != null) {
                 cursor.close();
@@ -206,5 +210,6 @@ public class acceuil extends AppCompatActivity {
 
         return fullName;
     }
+
 
 }
