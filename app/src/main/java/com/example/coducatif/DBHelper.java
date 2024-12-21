@@ -48,6 +48,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_USERS_TABLE);
         db.execSQL(CREATE_PROFILE_TABLE);
     }
+    // Méthode pour récupérer la base de données en lecture
+    public SQLiteDatabase getReadableDb() {
+        return this.getReadableDatabase();
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
