@@ -83,11 +83,7 @@
                 android:textColorHint="#8A8A8A"
                 android:inputType="text" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/baseline_filter_24"
-                app:tint="#8A8A8A" />
+
         </LinearLayout>
 
         <!-- React Introduction Card -->
@@ -200,7 +196,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/htcs" />
+                        android:src="@drawable/cap12" />
 
 
                     <TextView
@@ -253,6 +249,7 @@
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/img"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -337,7 +334,7 @@
                 android:textSize="14sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="140dp"
                 android:layout_marginEnd="8dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -365,7 +362,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/img1"
+                        android:src="@drawable/men2"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/circle_border"
@@ -375,7 +372,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="John"
+                        android:text="YASSINE ABHIR"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -393,7 +390,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/img2"
+                        android:src="@drawable/men3"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/circle_border"
@@ -402,7 +399,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Karim"
+                        android:text="Omar"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -420,7 +417,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/img3"
+                        android:src="@drawable/men4"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/circle_border"
@@ -429,7 +426,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Youssef"
+                        android:text="Eduardo Diogo"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -447,7 +444,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/img4"
+                        android:src="@drawable/men5"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
                         android:background="@drawable/circle_border"
@@ -456,7 +453,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fouad"
+                        android:text="Marwane"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"

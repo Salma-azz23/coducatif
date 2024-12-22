@@ -86,8 +86,7 @@
         <activity android:name=".SignIN"
             android:exported="false"/>
 
-        <activity android:name=".popularactivity"
-            android:exported="false"/>
+        <activity android:name=".popularactivity" />
         <activity android:name=".ScoreActivity"
             android:exported="false"/>
         <activity android:name=".acceuil"
@@ -98,7 +97,7 @@
             android:exported="false"/>
 
         <activity android:name=".FillProfileActivity" />
-        <activity android:name=".ChatActivity" />
+
 
 
     </application>

@@ -1,6 +1,9 @@
 package com.example.coducatif;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -8,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,57 +21,59 @@ public class mentors extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mentors);
+        CardView card6 = findViewById(R.id.course9);
+        CardView card7 = findViewById(R.id.course10);
+        CardView card8 = findViewById(R.id.course11);
+        CardView card9 = findViewById(R.id.course12);
+        Button cour = findViewById(R.id.tabcourses);
 
-        // Initialiser les vues
-        ImageView backButton = findViewById(R.id.back_button);
-        EditText searchMentors = findViewById(R.id.searchMentors);
-        Button tabCourses = findViewById(R.id.tabcourses);
-        Button tabMentors = findViewById(R.id.tabmentors);
-        ImageView karImage = findViewById(R.id.kar);
-        ImageView amanImage = findViewById(R.id.aman);
-        ImageView jamaImage = findViewById(R.id.jama);
-        ImageView robImage = findViewById(R.id.rob);
-        ImageView johnImage = findViewById(R.id.john);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
-        // Gérer le clic sur le bouton retour
-        backButton.setOnClickListener(view -> {
-            Toast.makeText(this, "Back button clicked", Toast.LENGTH_SHORT).show();
-            // Ajoutez ici votre logique pour revenir en arrière
+        cour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mentors.this, course_crcq.class); // Remplacez par le nom de votre activité
+                startActivity(intent);
+            }
         });
 
-        // Gérer le clic sur l'onglet "Courses"
-        tabCourses.setOnClickListener(view -> {
-            Toast.makeText(this, "Courses tab clicked", Toast.LENGTH_SHORT).show();
-            // Ajoutez ici votre logique pour afficher les cours
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lien YouTube
+                String Link = "https://www.linkedin.com/in/yassine-abhir-862b74316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
+                startActivity(intent);
+            }
+        });
+        card7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lien YouTube
+                String Link = "https://www.linkedin.com/in/baabouj?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
+                startActivity(intent);
+            }
+        });
+        card8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lien YouTube
+                String Link = "https://www.linkedin.com/in/eduardoandrediogo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
+                startActivity(intent);
+            }
+        });
+        card9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lien YouTube
+                String Link = "https://www.linkedin.com/in/marwane-laks?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Link));
+                startActivity(intent);
+            }
         });
 
-        // Gérer le clic sur l'onglet "Mentors"
-        tabMentors.setOnClickListener(view -> {
-            Toast.makeText(this, "Mentors tab clicked", Toast.LENGTH_SHORT).show();
-            // Ajoutez ici votre logique pour afficher les mentors
-        });
 
-        // Gérer les clics sur les images des mentors
-        karImage.setOnClickListener(view -> {
-            Toast.makeText(this, "Kar clicked", Toast.LENGTH_SHORT).show();
-        });
 
-        amanImage.setOnClickListener(view -> {
-            Toast.makeText(this, "Aman clicked", Toast.LENGTH_SHORT).show();
-        });
-
-        jamaImage.setOnClickListener(view -> {
-            Toast.makeText(this, "Jama clicked", Toast.LENGTH_SHORT).show();
-        });
-
-        robImage.setOnClickListener(view -> {
-            Toast.makeText(this, "Rob clicked", Toast.LENGTH_SHORT).show();
-        });
-
-        johnImage.setOnClickListener(view -> {
-            Toast.makeText(this, "John clicked", Toast.LENGTH_SHORT).show();
-        });
 
 
     }
