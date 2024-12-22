@@ -150,6 +150,20 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return profile;
     }
+    public boolean updateProfile(int userId, String fullName, String nickName, String dob, String phone) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("full_name", fullName);
+        values.put("nick_name", nickName);
+        values.put("dob", dob);
+        values.put("phone", phone);
+
+        // Perform the update in the database
+        int rowsAffected = db.update(PROFILE_TABLE, values, "user_id = ?", new String[]{String.valueOf(userId)});
+        db.close();
+
+        return rowsAffected > 0; // Return true if the update was successful, false otherwise
+    }
 
     public static class certifActivity extends AppCompatActivity {
 
