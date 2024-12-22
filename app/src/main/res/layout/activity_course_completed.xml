@@ -12,7 +12,6 @@
         android:background="#80000000"
         android:gravity="center">
 
-        <!-- Utilisation d'une ImageView pour afficher l'image complète -->
         <ImageView
             android:id="@+id/course_completed_image"
             android:layout_width="300dp"

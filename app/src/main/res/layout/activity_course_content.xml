@@ -240,6 +240,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/course_react"
                     android:layout_width="400dp"
                     android:layout_height="56dp"
                     android:layout_gravity="center_horizontal"
