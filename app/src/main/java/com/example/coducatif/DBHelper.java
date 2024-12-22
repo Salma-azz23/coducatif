@@ -134,6 +134,22 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         db.close();
     }
+    public Profile getProfile(int userId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Profile profile = null;
+        Cursor cursor = db.rawQuery("SELECT * FROM profiles WHERE user_id = ?", new String[]{String.valueOf(userId)});
+        if (cursor.moveToFirst()) {
+            int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+            String fullName = cursor.getString(cursor.getColumnIndexOrThrow("full_name"));
+            String nickName = cursor.getString(cursor.getColumnIndexOrThrow("nick_name"));
+            String dob = cursor.getString(cursor.getColumnIndexOrThrow("dob"));
+            String phone = cursor.getString(cursor.getColumnIndexOrThrow("phone"));
+            profile = new Profile(id, fullName, nickName, dob, phone);
+        }
+        cursor.close();
+        db.close();
+        return profile;
+    }
 
     public static class certifActivity extends AppCompatActivity {
 
