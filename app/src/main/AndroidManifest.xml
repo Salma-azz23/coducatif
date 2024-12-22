@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.coducatif">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
@@ -24,6 +26,9 @@
         </activity>
         <activity
             android:name="com.example.coducatif.quiz3Partie1Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.coducatif.certifActivity"
             android:exported="false" />
         <!-- La bonne activité de lancement -->
 
@@ -76,6 +81,8 @@
 
 
 
+
+
         <activity android:name=".IntroActivity" />
 
         <activity android:name=".Intro1Activity"
@@ -86,7 +93,8 @@
         <activity android:name=".SignIN"
             android:exported="false"/>
 
-        <activity android:name=".popularactivity" />
+        <activity android:name=".popularactivity"
+            android:exported="false"/>
         <activity android:name=".ScoreActivity"
             android:exported="false"/>
         <activity android:name=".acceuil"
@@ -95,8 +103,12 @@
             android:exported="false"/>
         <activity android:name=".PinActivity"
             android:exported="false"/>
+        <activity android:name=".ProfileActivity" android:exported="false"/>
+        <activity android:name=".EditProfileActivity" android:exported="false"/>
 
-        <activity android:name=".FillProfileActivity" />
+
+        <activity android:name=".FillProfileActivity"
+            android:exported="false"/>
 
 
 

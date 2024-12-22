@@ -30,13 +30,15 @@
                 android:contentDescription="Menu" />
 
             <TextView
+                android:id="@+id/welcome_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=" Hi, Student 🎮"
+                android:text="Hi, Student 🎮"
                 android:textColor="#2B7B8C"
                 android:textSize="22sp"
                 android:fontFamily="sans-serif-medium" />
+
 
             <ImageView
                 android:id="@+id/invite_friends_icon"

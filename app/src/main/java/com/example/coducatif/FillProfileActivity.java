@@ -171,8 +171,6 @@ public class FillProfileActivity extends AppCompatActivity {
         // Vérification si l'utilisateur existe déjà
         // Vérification si l'utilisateur existe déjà
         if (dbHelper.checkUser(email)) {
-            Toast.makeText(FillProfileActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
-        } else {
             // Enregistrement de l'utilisateur et de son profil
             dbHelper.addUser(email, "defaultPassword"); // Ajouter avec un mot de passe par défaut
             int userId = dbHelper.getUserIdByEmail(email);
@@ -187,6 +185,9 @@ public class FillProfileActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(FillProfileActivity.this, "Erreur lors de la création du profil", Toast.LENGTH_SHORT).show();
             }
+
+        } else {
+            Toast.makeText(FillProfileActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
         }
 
     }

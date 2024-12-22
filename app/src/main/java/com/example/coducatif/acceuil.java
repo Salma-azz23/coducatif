@@ -2,7 +2,6 @@ package com.example.coducatif;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +25,6 @@ public class acceuil extends AppCompatActivity {
         TextView startButton = findViewById(R.id.start_button); // Ajoutez un ID au bouton "START"
         TextView seeAllPopularCourses = findViewById(R.id.see_all_popular_courses); // Ajoutez un ID au lien "See All" pour Popular Courses
         LinearLayout interactiveUICard = findViewById(R.id.interactive_ui_card); // Ajoutez un ID à la carte Interactive UI Development
-        LinearLayout IMG = findViewById(R.id.img);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView seeAllMentors = findViewById(R.id.see_all_mentors); // Ajoutez un ID au lien "See All" pour Top Mentors
 
         // Redirection vers "activity_invite_friends.xml" lors du clic sur l'icône
@@ -55,28 +53,16 @@ public class acceuil extends AppCompatActivity {
         seeAllPopularCourses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("SeeAllPopularCourses", "Button clicked"); // Vérification du clic
-                Intent intent = new Intent(acceuil.this, popularactivity.class);
+                Intent intent = new Intent(acceuil.this, popularactivity.class); // Remplacez par le nom de votre activité
                 startActivity(intent);
             }
         });
-
-
 
         // Redirection vers "activity_levels.xml" lors du clic sur la carte Interactive UI Development
         interactiveUICard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(acceuil.this, levels.class); // Remplacez par le nom de votre activité
-                startActivity(intent);
-            }
-        });
-        IMG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Lien YouTube
-                String youtubeLink = "https://youtu.be/Ew7KG2j8eII?si=A9eIpNTNvCjaD9tu";
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeLink));
                 startActivity(intent);
             }
         });
