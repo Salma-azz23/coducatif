@@ -103,6 +103,9 @@
             android:exported="false"/>
         <activity android:name=".PinActivity"
             android:exported="false"/>
+        <activity android:name=".ProfileActivity" android:exported="false"/>
+        <activity android:name=".EditProfileActivity" android:exported="false"/>
+
 
         <activity android:name=".FillProfileActivity" />
 

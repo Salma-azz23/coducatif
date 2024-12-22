@@ -134,6 +134,36 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         db.close();
     }
+    public Profile getProfile(int userId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Profile profile = null;
+        Cursor cursor = db.rawQuery("SELECT * FROM profiles WHERE user_id = ?", new String[]{String.valueOf(userId)});
+        if (cursor.moveToFirst()) {
+            int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+            String fullName = cursor.getString(cursor.getColumnIndexOrThrow("full_name"));
+            String nickName = cursor.getString(cursor.getColumnIndexOrThrow("nick_name"));
+            String dob = cursor.getString(cursor.getColumnIndexOrThrow("dob"));
+            String phone = cursor.getString(cursor.getColumnIndexOrThrow("phone"));
+            profile = new Profile(id, fullName, nickName, dob, phone);
+        }
+        cursor.close();
+        db.close();
+        return profile;
+    }
+    public boolean updateProfile(int userId, String fullName, String nickName, String dob, String phone) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("full_name", fullName);
+        values.put("nick_name", nickName);
+        values.put("dob", dob);
+        values.put("phone", phone);
+
+        // Perform the update in the database
+        int rowsAffected = db.update(PROFILE_TABLE, values, "user_id = ?", new String[]{String.valueOf(userId)});
+        db.close();
+
+        return rowsAffected > 0; // Return true if the update was successful, false otherwise
+    }
 
     public static class certifActivity extends AppCompatActivity {
 
