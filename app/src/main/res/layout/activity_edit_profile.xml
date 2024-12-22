@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8460DCFD"
+    android:background="#F3F4F6"
     android:paddingTop="32dp"
     android:padding="16dp">
 
@@ -10,18 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingTop="40dp"
         android:gravity="center_horizontal">
 
-        <!-- Form Section -->
+        <!-- Profile Image Section -->
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:elevation="6dp"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/client2"
+                android:contentDescription="Image de profil"
+                android:clipToOutline="true" />
+        </LinearLayout>
+
+
+        <!-- Input Form Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/rounded_card"
-            android:padding="16dp"
-            android:layout_marginTop="32dp"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="24dp"
-            android:elevation="6dp">
+            android:elevation="8dp">
 
             <!-- Full Name Input -->
             <LinearLayout
@@ -29,13 +50,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_profile_edit1"
-
+                    android:src="@drawable/ic_profile_edit"
+                    android:tint="#374151"
                     android:layout_marginEnd="12dp" />
 
                 <EditText
@@ -46,7 +67,8 @@
                     android:background="@null"
                     android:textColor="#374151"
                     android:textSize="16sp"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:fontFamily="sans-serif" />
             </LinearLayout>
 
             <!-- Nick Name Input -->
@@ -55,13 +77,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_profile_edit1"
-
+                    android:src="@drawable/ic_profile_edit"
+                    android:tint="#374151"
                     android:layout_marginEnd="12dp" />
 
                 <EditText
@@ -72,7 +94,8 @@
                     android:background="@null"
                     android:textColor="#374151"
                     android:textSize="16sp"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:fontFamily="sans-serif" />
             </LinearLayout>
 
             <!-- Date of Birth Input -->
@@ -81,13 +104,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_calendar"
-                    android:tint="#165562"
+                    android:tint="#374151"
                     android:layout_marginEnd="12dp" />
 
                 <EditText
@@ -98,7 +121,8 @@
                     android:background="@null"
                     android:textColor="#374151"
                     android:textSize="16sp"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:fontFamily="sans-serif" />
             </LinearLayout>
 
             <!-- Phone Number Input -->
@@ -112,7 +136,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/ic_phone"
-                    android:tint="#165562"
+                    android:tint="#374151"
                     android:layout_marginEnd="12dp" />
 
                 <EditText
@@ -123,7 +147,8 @@
                     android:background="@null"
                     android:textColor="#374151"
                     android:textSize="16sp"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:fontFamily="sans-serif" />
             </LinearLayout>
         </LinearLayout>
 
@@ -134,9 +159,10 @@
             android:layout_height="wrap_content"
             android:text="Enregistrer"
             android:textSize="16sp"
+            android:textStyle="bold"
             android:backgroundTint="#165562"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:padding="12dp"
             android:elevation="8dp"
             android:background="@drawable/rounded_button" />
