@@ -18,11 +18,11 @@
             android:layout_height="30dp"
             android:contentDescription="Retour"
             android:src="@drawable/ic_back_icon"
-            android:tint="#FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="16dp"
+            app:tint="#FFFFFF" />
 
         <!-- Title -->
         <TextView
@@ -47,11 +47,11 @@
             android:layout_height="30dp"
             android:contentDescription="Recherche"
             android:src="@drawable/ic_search"
-            android:tint="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            app:tint="#FFFFFF" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

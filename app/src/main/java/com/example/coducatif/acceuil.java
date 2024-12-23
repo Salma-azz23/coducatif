@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.net.Uri;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -48,6 +49,7 @@ public class acceuil extends AppCompatActivity {
         TextView startButton = findViewById(R.id.start_button);
         TextView seeAllPopularCourses = findViewById(R.id.see_all_popular_courses);
         LinearLayout interactiveUICard = findViewById(R.id.interactive_ui_card);
+        LinearLayout IMG = findViewById(R.id.img);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView seeAllMentors = findViewById(R.id.see_all_mentors);
         ImageView menuIcon = findViewById(R.id.menu_icon);
 
@@ -96,6 +98,15 @@ public class acceuil extends AppCompatActivity {
             }
         });
 
+        IMG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lien YouTube
+                String youtubeLink = "https://youtu.be/Ew7KG2j8eII?si=A9eIpNTNvCjaD9tu";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeLink));
+                startActivity(intent);
+            }
+        });
 
         // Set up the click listeners for navigation
         inviteFriendsIcon.setOnClickListener(new View.OnClickListener() {

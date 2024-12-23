@@ -1,0 +1,465 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4D9D9">
+
+    <TextView
+        android:id="@+id/chapterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Chapitre 1"
+        android:textColor="#3E4A89"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/chapterTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#BAC9EB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. React est une bibliothèque JavaScript:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lessonText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="React est une bibliothèque JavaScript qui permet de créer des interfaces utilisateur interactives et dynamiques. Contrairement à un framework, elle se concentre uniquement sur la création de l'interface utilisateur, laissant aux développeurs le choix d'autres outils pour gérer l'architecture complète d'une application."
+                        android:textColor="#004741"
+                        android:textSize="14sp" />
+
+                    <!-- Placeholder Image -->
+                    <ImageView
+                        android:id="@+id/photo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="123dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo1" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#6B8C80"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. React couvre la couche UI (Interface Utilisateur) :"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="React se limite à la couche d'interface utilisateur (UI), qui représente tout ce qui est visible par     l'utilisateur. Elle ne gère ni les données ni la logique métier de l'application, mais se concentre sur la manière dont les données sont affichées et interactives."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo2" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#9EC18D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. Utilisation du DOM Virtuel pour les performances "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="React utilise un DOM virtuel (Virtual DOM) pour améliorer les performances. Le DOM virtuel est une  copie légère du DOM réel. React l’utilise pour détecter les changements et ne mettre à jour éléments modifiés dans le DOM réel, réduisant ainsi les temps de chargement."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo3"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo3" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#896786"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4. React est basé sur les composants : "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="React utilise des composants pour construire les interfaces. Un composant est une partie autonome de l'interface, comme un bouton ou un formulaire. Chaque composant est réutilisable, ce qui facilite la gestion et la composition d'applications."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo4"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo4" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#208FC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5. Organisation des composants dans un projet React :"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Les composants sont généralement stockés dans un dossier components dans le répertoire src/ pour structurer le code proprement."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo5"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo5" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#BF873D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6. Un composant peut rendre plusieurs éléments:"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Un composant React peut retourner plusieurs éléments à condition qu'ils soient encapsulés dans un conteneur parent, comme une div ou React.Fragment."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo6"
+                        android:layout_width="match_parent"
+                        android:layout_height="258dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo6" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#956767"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7. Limites de React  :"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="React a certaines limites :
+Il gère seulement la couche vue, il faut donc combiner d'autres outils pour une application complète.
+L'utilisation de JSX peut être difficile à appréhender pour certains.
+La taille de la bibliothèque peut être un obstacle pour les petites applications."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo7"
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo7" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#73A48C"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8. Accès à l’état d’un composant avec this.state :"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dans une classe React, l’état (state) est accessible via this.state. Dans les fonctions, on utilise le hook useState."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo8"
+                        android:layout_width="match_parent"
+                        android:layout_height="344dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo6" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="#8CF50057"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9. Les Props pour transmettre des données entre composants : "
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Les props sont des données passées d'un composant parent à un composant enfant et ne peuvent être modifiées par l'enfant."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo9"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo9" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:backgroundTint="#BF4700F9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10. Le State comme stockage interne d’un composant"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lessonText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Le state représente les données internes d'un composant, spécifiques à son fonctionnement. Contrairement aux props, le state peut être modifié par le composant lui-même."
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        android:textColor="#004741" />
+
+                    <ImageView
+                        android:id="@+id/photo10"
+                        android:layout_width="match_parent"
+                        android:layout_height="259dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/photo10" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

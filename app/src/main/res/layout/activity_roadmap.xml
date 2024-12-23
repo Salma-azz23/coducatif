@@ -161,11 +161,22 @@
             <!-- Bouton Enroll Now -->
             <!-- Image complète avec la barre et le bouton -->
             <ImageView
+                android:id="@+id/roadmap"
                 android:layout_width="4000dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Button with bar design"
-                android:src="@drawable/ic_barre_enroll" />
+                android:src="@drawable/roadmap"
+                android:clickable="true"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/roadmap_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:contentDescription="Roadmap Image"
+                android:src="@drawable/roadmap" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
