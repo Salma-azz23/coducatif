@@ -1,4 +1,5 @@
 <resources>
     <string name="back">Back</string>
     <string name="app_name">Coducatif</string>
+    <string name="title_activity_chat_community">chat_community</string>
 </resources>

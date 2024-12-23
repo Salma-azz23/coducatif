@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.coducatif">
+    package="com.example.coducatif" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +15,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coducatifacceuil"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".MaineActivity"
-            android:exported="true">
+            android:name=".chat_community"
+            android:exported="true"
+            android:label="@string/title_activity_chat_community"
+            android:theme="@style/Theme.Coducatifacceuil" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,28 +28,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.coducatif.quiz3Partie1Activity"
-            android:exported="false" />
-        <!-- La bonne activité de lancement -->
+            android:name=".MaineActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name="com.example.coducatif.roadmap"
+            android:name=".quiz3Partie1Activity"
+            android:exported="false" /> <!-- La bonne activité de lancement -->
+        <activity
+            android:name=".roadmap"
             android:exported="false" />
         <activity
-            android:name="com.example.coducatif.levels"
+            android:name=".levels"
             android:exported="true" />
         <activity
-            android:name="com.example.coducatif.course_content"
+            android:name=".course_content"
             android:exported="false" />
-       <activity android:name=".course_crcq"
-           android:exported="false"/>
+        <activity
+            android:name=".course_crcq"
+            android:exported="false" />
         <activity
             android:name=".quiz2Partie2Activity"
             android:exported="false" />
         <activity
             android:name=".quiz1Partie2Activity"
             android:exported="false" />
-
         <activity
             android:name=".quiz6Partie1Activity"
             android:exported="false" />
@@ -54,8 +66,6 @@
         <activity
             android:name=".quiz4Partie1Activity"
             android:exported="false" />
-
-
         <activity
             android:name=".course_completedActivity"
             android:exported="false" />
@@ -68,43 +78,41 @@
         <activity
             android:name=".QuiZ1Partie1Activity"
             android:exported="false" />
-
         <activity android:name=".IntroActivity" />
-
-        <activity android:name=".Intro1Activity"
-            android:exported="false"/>
-        <activity android:name=".Intro2Activity"
-            android:exported="false"/>
-        <activity android:name=".SignUpActivity"
-            android:exported="false"/>
-        <activity android:name=".SignIN"
-            android:exported="false"/>
-
-        <activity android:name=".popularactivity"
-            android:exported="false"/>
-        <activity android:name=".ScoreActivity"
-            android:exported="false"/>
-        <activity android:name=".acceuil"
-            android:exported="false"/>
-        <activity android:name=".mentors"
-            android:exported="false"/>
-
+        <activity
+            android:name=".Intro1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Intro2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignIN"
+            android:exported="false" />
+        <activity
+            android:name=".popularactivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acceuil"
+            android:exported="false" />
+        <activity
+            android:name=".mentors"
+            android:exported="false" />
         <activity android:name=".FillProfileActivity" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
-
-
-
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

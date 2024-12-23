@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:8.6.0'
         classpath libs.google.services
+        classpath libs.kotlin.gradle.plugin
     }
 }
 
