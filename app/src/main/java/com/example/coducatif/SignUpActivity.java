@@ -62,13 +62,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     // Méthode associée au clic sur le TextView "LOG IN"
     public void redirectToSignIn(View view) {
-        // Vérifie l'ID de la vue cliquée
-        if (view.getId() == R.id.sign_up_prompt) {
-            // Exécute l'action
-            Intent intent = new Intent(SignUpActivity.this, SignIN.class);
-            startActivity(intent);
-            finish();
-        }
+        Intent intent = new Intent(SignUpActivity.this, SignIN.class);
+        startActivity(intent);
+        finish();
     }
 
 }
+
+

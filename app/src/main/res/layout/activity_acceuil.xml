@@ -18,15 +18,27 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_menu_24"
+                android:background="@drawable/circle_bg"
+                android:scaleType="centerCrop"
+                app:tint="#2B7B8C"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Menu" />
 
             <TextView
+                android:id="@+id/welcome_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hi, Student"
+                android:text="Hi, Student 🎮"
                 android:textColor="#2B7B8C"
                 android:textSize="22sp"
                 android:fontFamily="sans-serif-medium" />
+
 
             <ImageView
                 android:id="@+id/invite_friends_icon"
@@ -39,6 +51,14 @@
         </LinearLayout>
 
         <!-- Search Bar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=" 🎮 Welcome To the Game Zone 🎮\n What would you like to learn 📒 Today?"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -58,18 +78,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:hint="Search for.."
+                android:hint="Search for... 🎉🎮"
                 android:background="@null"
                 android:padding="8dp"
                 android:textColor="#000"
                 android:textColorHint="#8A8A8A"
                 android:inputType="text" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/baseline_filter_24"
-                app:tint="#8A8A8A" />
+
         </LinearLayout>
 
         <!-- React Introduction Card -->
@@ -101,13 +117,15 @@
                     android:layout_height="wrap_content"
                     android:text="Introduction to React JS"
                     android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif-medium" />
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    app:labelVisibilityMode="labeled"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0/10 Completed"
+                    android:text=" ⏺ 0/10 Completed"
                     android:textColor="#8A8A8A"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
@@ -117,7 +135,7 @@
                 android:id="@+id/start_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="START"
+                android:text="START 🎮"
                 android:textAllCaps="false"
                 android:backgroundTint="#2B7B8C"
                 android:textColor="#FFFFFF"
@@ -136,7 +154,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popular Courses"
+                android:text="Popular Courses &lt;📒/&gt;"
                 android:textColor="#2B7B8C"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium" />
@@ -145,11 +163,11 @@
                 android:id="@+id/see_all_popular_courses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See All >>"
+                android:text="See All🧐>>"
                 android:textColor="#2B7B8C"
                 android:textSize="14sp"
                 android:gravity="end"
-                android:layout_marginStart="170dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -178,9 +196,9 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="178dp"
+                        android:layout_height="100dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/htcs" />
+                        android:src="@drawable/cap12" />
 
 
                     <TextView
@@ -193,7 +211,8 @@
                         android:padding="4dp"
                         android:text="React JS"
                         android:textColor="#FF5722"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        app:labelVisibilityMode="labeled"/>
 
                     <!-- Course Name -->
                     <TextView
@@ -204,7 +223,8 @@
                         android:text="Interactive UI Development"
                         android:textColor="#000"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        app:labelVisibilityMode="labeled"/>
 
                     <!-- Price and Rating -->
                     <LinearLayout
@@ -231,6 +251,7 @@
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/img"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -238,14 +259,6 @@
                     android:padding="16dp"
                     android:layout_marginRight="8dp"
                     android:elevation="4dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
-                        android:text="What would you like to learn Today?\nSearch Below."
-                        android:textColor="#333"
-                        android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -309,7 +322,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Top Mentors"
+                android:text="Top Mentors👨‍🏫"
                 android:textColor="#2B7B8C"
                 android:textSize="18sp"
                 android:fontFamily="sans-serif-medium" />
@@ -318,12 +331,12 @@
                 android:id="@+id/see_all_mentors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See All >>"
+                android:text="See All 🧐>>"
                 android:textColor="#2B7B8C"
                 android:textSize="14sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_marginStart="200dp"
+                android:layout_marginStart="140dp"
                 android:layout_marginEnd="8dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -351,16 +364,17 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/john"
+                        android:src="@drawable/men2"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="John"
+                        android:text="YASSINE ABHIR"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -378,16 +392,16 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/ka"
+                        android:src="@drawable/men3"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Karim"
+                        android:text="Omar"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -405,16 +419,16 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/yous"
+                        android:src="@drawable/men4"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Youssef"
+                        android:text="Eduardo Diogo"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -432,16 +446,16 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:src="@drawable/cap7"
+                        android:src="@drawable/men5"
                         android:scaleType="centerCrop"
                         android:layout_marginBottom="8dp"
-                        android:background="@drawable/circle_bg"
+                        android:background="@drawable/circle_border"
                         android:clipToOutline="true" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fouad"
+                        android:text="Marwane"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold"

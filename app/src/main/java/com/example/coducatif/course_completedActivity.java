@@ -2,15 +2,12 @@ package com.example.coducatif;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import com.example.coducatif.R;
 
 public class course_completedActivity extends AppCompatActivity {
 
@@ -30,7 +27,7 @@ public class course_completedActivity extends AppCompatActivity {
         ImageView courseCompletedImage = findViewById(R.id.course_completed_image);
         courseCompletedImage.setOnClickListener(view -> {
             // Lorsque l'utilisateur clique sur l'image, on passe à l'activité CertifActivity
-            Intent intent = new Intent(course_completedActivity.this, certifActivity.class);
+            Intent intent = new Intent(course_completedActivity.this, DBHelper.certifActivity.class);
             startActivity(intent);
         });
     }

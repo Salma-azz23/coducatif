@@ -32,6 +32,7 @@ public class FillProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fill_profile);
 
+        // Initialisation des vues
         fullNameEditText = findViewById(R.id.fullNameEditText);
         nickNameEditText = findViewById(R.id.nickNameEditText);
         dobEditText = findViewById(R.id.dobEditText);
@@ -61,57 +62,11 @@ public class FillProfileActivity extends AppCompatActivity {
             }
         });
 
+        // Listener pour le bouton continuer
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Récupération des données entrées par l'utilisateur
-                String fullName = fullNameEditText.getText().toString().trim();
-                String nickName = nickNameEditText.getText().toString().trim();
-                String dob = dobEditText.getText().toString().trim();
-                String email = emailEditText.getText().toString().trim();
-                String phone = phoneEditText.getText().toString().trim();
-
-                // Validation des champs
-                if (fullName.isEmpty() || nickName.isEmpty() || dob.isEmpty() || email.isEmpty() || phone.isEmpty()) {
-                    Toast.makeText(FillProfileActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Vérification du numéro de téléphone (10 chiffres)
-                if (!phone.matches("\\d{10}")) {
-                    Toast.makeText(FillProfileActivity.this, "Le numéro de téléphone doit contenir exactement 10 chiffres", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (!email.matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
-                    Toast.makeText(FillProfileActivity.this, "Le format de l'email est incorrect", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-                // Vérification du format de la date de naissance
-                if (!dob.matches("\\d{2}/\\d{2}/\\d{4}")) {
-                    Toast.makeText(FillProfileActivity.this, "La date de naissance doit être au format JJ/MM/AAAA", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Vérification si l'utilisateur existe déjà
-                if (dbHelper.checkUser(email)) {
-                    Toast.makeText(FillProfileActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Enregistrement de l'utilisateur et de son profil
-                    dbHelper.addUser(email, "defaultPassword");
-                    int userId = dbHelper.getUserIdByEmail(email);
-                    if (userId != -1) {
-                        dbHelper.addProfile(userId, fullName, nickName, dob, phone);
-                        Toast.makeText(FillProfileActivity.this, "Profil créé avec succès", Toast.LENGTH_SHORT).show();
-                        // Création de l'intent pour naviguer vers PinActivity
-                        Intent intent = new Intent(FillProfileActivity.this, PinActivity.class);
-                        startActivity(intent); // Lancement de l'activité PinActivity
-                        finish(); // Redirection vers une autre activité (PinActivity, par exemple)
-                    } else {
-                        Toast.makeText(FillProfileActivity.this, "Erreur lors de la création du profil", Toast.LENGTH_SHORT).show();
-                    }
-                }
+                handleContinueButtonClick();
             }
         });
     }
@@ -180,5 +135,60 @@ public class FillProfileActivity extends AppCompatActivity {
             profileImageView.setImageURI(Uri.parse(savedImageUri));
         }
     }
-}
 
+    private void handleContinueButtonClick() {
+        // Récupération des données entrées par l'utilisateur
+        String fullName = fullNameEditText.getText().toString().trim();
+        String nickName = nickNameEditText.getText().toString().trim();
+        String dob = dobEditText.getText().toString().trim();
+        String email = emailEditText.getText().toString().trim();
+        String phone = phoneEditText.getText().toString().trim();
+
+        // Validation des champs
+        if (fullName.isEmpty() || nickName.isEmpty() || dob.isEmpty() || email.isEmpty() || phone.isEmpty()) {
+            Toast.makeText(FillProfileActivity.this, "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Vérification du numéro de téléphone (10 chiffres)
+        if (!phone.matches("\\d{10}")) {
+            Toast.makeText(FillProfileActivity.this, "Le numéro de téléphone doit contenir exactement 10 chiffres", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Vérification du format de l'email
+        if (!email.matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")) {
+            Toast.makeText(FillProfileActivity.this, "Le format de l'email est incorrect", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Vérification du format de la date de naissance
+        if (!dob.matches("\\d{2}/\\d{2}/\\d{4}")) {
+            Toast.makeText(FillProfileActivity.this, "La date de naissance doit être au format JJ/MM/AAAA", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Vérification si l'utilisateur existe déjà
+        // Vérification si l'utilisateur existe déjà
+        if (dbHelper.checkUser(email)) {
+            // Enregistrement de l'utilisateur et de son profil
+            dbHelper.addUser(email, "defaultPassword"); // Ajouter avec un mot de passe par défaut
+            int userId = dbHelper.getUserIdByEmail(email);
+            if (userId != -1) {
+                dbHelper.addProfile(userId, fullName, nickName, dob, phone);
+                Toast.makeText(FillProfileActivity.this, "Profil créé avec succès", Toast.LENGTH_SHORT).show();
+
+                // Redirection vers l'activité suivante
+                Intent intent = new Intent(FillProfileActivity.this, PinActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(FillProfileActivity.this, "Erreur lors de la création du profil", Toast.LENGTH_SHORT).show();
+            }
+
+        } else {
+            Toast.makeText(FillProfileActivity.this, "Cet utilisateur existe déjà", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+}

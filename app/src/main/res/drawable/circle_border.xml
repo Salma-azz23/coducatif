@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bordure noire -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#2B7B8C" />
+        </shape>
+    </item>
+
+    <!-- Cercle intérieur (pour l'image) -->
+    <item
+        android:top="7dp"
+        android:bottom="6.8dp"
+        android:left="6.8dp"
+        android:right="6.8dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

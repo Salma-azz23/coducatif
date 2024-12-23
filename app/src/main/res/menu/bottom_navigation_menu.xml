@@ -2,17 +2,17 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home" />
+        android:title="accueil" />
     <item
         android:id="@+id/nav_courses"
         android:icon="@drawable/baseline_school_24"
-        android:title="Courses" />
+        android:title="Cours" />
     <item
         android:id="@+id/nav_help"
-        android:icon="@drawable/baseline_help_24"
-        android:title="Help" />
+        android:icon="@drawable/baseline_groups_24"
+        android:title="Communauté" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/baseline_account_circle_24"
-        android:title="Profile" />
+        android:title="Profil" />
 </menu>

@@ -5,17 +5,22 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "coducatif.db";
     private static final int DATABASE_VERSION = 1;
 
-    // Nom de la table
+    // Nom des tables
     private static final String USERS_TABLE = "users";
-    private static final String PROFILE_TABLE = "profiles"; // Nouveau tableau pour les profils
-    private static final String COLUMN_EMAIL = "email";
-    private static final String COLUMN_PASSWORD = "password";
+    private static final String PROFILE_TABLE = "profiles";
 
     // SQL pour créer les tables
     private static final String CREATE_USERS_TABLE =
@@ -42,26 +47,19 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_USERS_TABLE);
         db.execSQL(CREATE_PROFILE_TABLE);
-        String createTable = "CREATE TABLE "  + "("
-                + COLUMN_EMAIL + " TEXT PRIMARY KEY, "
-                + COLUMN_PASSWORD + " TEXT)";
-        db.execSQL(createTable);
+    }
+    // Méthode pour récupérer la base de données en lecture
+    public SQLiteDatabase getReadableDb() {
+        return this.getReadableDatabase();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + USERS_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + PROFILE_TABLE);
-
         onCreate(db);
     }
 
-    // Getter pour USERS_TABLE
-    public String getUsersTableName() {
-        return USERS_TABLE;
-    }
-
-    // Ajouter un utilisateur
     public void addUser(String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -69,13 +67,49 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("password", password);
         db.insert(USERS_TABLE, null, values);
         db.close();
-        long result = db.insert(USERS_TABLE, null, values);
-
-
     }
 
-    // Ajouter un profil
-    public void addProfile(int userId, String fullName, String nickName, String dob, String phone) {
+    // Méthode pour vérifier uniquement l'email
+    public boolean checkUser(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM users WHERE email = ?",
+                new String[]{email}
+        );
+        boolean exists = cursor.getCount() > 0; // Vérifie si un enregistrement existe
+        cursor.close();
+        db.close();
+        return exists;
+    }
+
+    // Méthode pour vérifier l'email et le mot de passe
+    public boolean checkUser(String email, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM users WHERE email = ? AND password = ?",
+                new String[]{email, password}
+        );
+        boolean isValid = cursor.getCount() > 0; // Vérifie si un enregistrement existe
+        cursor.close();
+        db.close();
+        return isValid;
+    }
+
+
+
+
+    public int getUserIdByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int userId = -1; // Valeur par défaut si l'utilisateur n'est pas trouvé
+        Cursor cursor = db.rawQuery("SELECT id FROM users WHERE email = ?", new String[]{email});
+        if (cursor.moveToFirst()) {
+            userId = cursor.getInt(0); // Récupération de l'ID
+        }
+        cursor.close();
+        db.close();
+        return userId;
+    }
+    public boolean addProfile(int userId, String fullName, String nickName, String dob, String phone) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("user_id", userId);
@@ -83,56 +117,66 @@ public class DBHelper extends SQLiteOpenHelper {
         values.put("nick_name", nickName);
         values.put("dob", dob);
         values.put("phone", phone);
-        db.insert(PROFILE_TABLE, null, values);
-        db.close();
-    }
 
-    // Vérifier si l'utilisateur existe
-    public boolean checkUser(String email) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + USERS_TABLE + " WHERE email=?", new String[]{email});
-        boolean exists = cursor.getCount() > 0;
-        cursor.close();
+        long result = db.insert("profiles", null, values);
         db.close();
-        return exists;
-    }
-    public boolean checkUse(String email, String password) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT * FROM users WHERE email = ? AND password = ?";
-        Cursor cursor = db.rawQuery(query, new String[]{email, password});
-
-        boolean userExists = cursor.getCount() > 0;
-        cursor.close();
-        return userExists;
+        return result != -1; // Retourne true si l'insertion a réussi, false sinon
     }
 
     public void savePin(int userId, String pin) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("pin", pin); // Assurez-vous que la colonne "pin" existe dans votre table de profils
-
-        int rowsAffected = db.update("users", values, "id = ?", new String[]{String.valueOf(userId)});
+        values.put("pin", pin);
+        int rowsAffected = db.update(USERS_TABLE, values, "id = ?", new String[]{String.valueOf(userId)});
         if (rowsAffected == 0) {
-            // Si l'utilisateur n'a pas été trouvé, ajoutez un nouveau code PIN
             values.put("user_id", userId);
             db.insert("pins", null, values);
         }
         db.close();
     }
-
-    // Récupérer l'ID de l'utilisateur par email
-    public int getUserIdByEmail(String email) {
+    public Profile getProfile(int userId) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT id FROM " + USERS_TABLE + " WHERE email=?", new String[]{email});
-        int userId = -1;
-
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                userId = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
-            }
-            cursor.close();
+        Profile profile = null;
+        Cursor cursor = db.rawQuery("SELECT * FROM profiles WHERE user_id = ?", new String[]{String.valueOf(userId)});
+        if (cursor.moveToFirst()) {
+            int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+            String fullName = cursor.getString(cursor.getColumnIndexOrThrow("full_name"));
+            String nickName = cursor.getString(cursor.getColumnIndexOrThrow("nick_name"));
+            String dob = cursor.getString(cursor.getColumnIndexOrThrow("dob"));
+            String phone = cursor.getString(cursor.getColumnIndexOrThrow("phone"));
+            profile = new Profile(id, fullName, nickName, dob, phone);
         }
+        cursor.close();
         db.close();
-        return userId;
+        return profile;
+    }
+    public boolean updateProfile(int userId, String fullName, String nickName, String dob, String phone) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("full_name", fullName);
+        values.put("nick_name", nickName);
+        values.put("dob", dob);
+        values.put("phone", phone);
+
+        // Perform the update in the database
+        int rowsAffected = db.update(PROFILE_TABLE, values, "user_id = ?", new String[]{String.valueOf(userId)});
+        db.close();
+
+        return rowsAffected > 0; // Return true if the update was successful, false otherwise
+    }
+
+    public static class certifActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            EdgeToEdge.enable(this);
+            setContentView(R.layout.activity_certif);
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                return insets;
+            });
+        }
     }
 }
