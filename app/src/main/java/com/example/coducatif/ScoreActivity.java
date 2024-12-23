@@ -22,19 +22,8 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        // Initialisation des étoiles
-        ImageView star1 = findViewById(R.id.starImageView1);
-        ImageView star2 = findViewById(R.id.starImageView2);
-        ImageView star3 = findViewById(R.id.starImageView3);
-        ImageView star4 = findViewById(R.id.starImageView4);
-        ImageView star5 = findViewById(R.id.starImageView5);
 
-        // Animation pour chaque étoile
-        animateStar(star1);
-        animateStar(star2);
-        animateStar(star3);
-        animateStar(star4);
-        animateStar(star5);
+
 
         // Récupérer les scores
         int score = getIntent().getIntExtra("score", 0);
@@ -96,13 +85,13 @@ public class ScoreActivity extends AppCompatActivity {
         Log.d("ScoreActivity", "Pourcentage : " + percentage);
 
         if (percentage >= 90) {
-            return "\uD83C\uDF89 Félicitations ! \uD83C\uDF89";
+            return "Excellent ! 🌟 Vous êtes un génie !";
         } else if (percentage >= 70) {
-            return "👏 Bon travail !";
+            return "Bon travail ! 👍 Continuez comme ça.";
         } else if (percentage >= 50) {
-            return "🙂 Pas mal, continuez !";
+            return "Passable 🙂 Essayez encore pour mieux faire.";
         } else {
-            return "😔 Vous pouvez faire mieux.";
+            return "Peut mieux faire Ne vous découragez pas !";
         }
     }
 
