@@ -2,11 +2,11 @@ package com.example.coducatif;
 
 public class Message {
     private String text;
-    private boolean isSentByUser;
+    private boolean sentByUser; // true si envoyé par l'utilisateur, false si reçu
 
-    public Message(String text, boolean isSentByUser) {
+    public Message(String text, boolean sentByUser) {
         this.text = text;
-        this.isSentByUser = isSentByUser;
+        this.sentByUser = sentByUser;
     }
 
     public String getText() {
@@ -14,6 +14,6 @@ public class Message {
     }
 
     public boolean isSentByUser() {
-        return isSentByUser;
+        return sentByUser;
     }
 }
