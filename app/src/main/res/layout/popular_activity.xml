@@ -26,6 +26,7 @@
 
             <!-- Bouton retour à gauche -->
             <ImageView
+                android:id="@+id/back_button"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="Back"

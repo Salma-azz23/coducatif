@@ -26,9 +26,17 @@ public class mentors extends AppCompatActivity {
         CardView card7 = findViewById(R.id.course10);
         CardView card8 = findViewById(R.id.course11);
         CardView card9 = findViewById(R.id.course12);
+        Button cours= findViewById(R.id.tabcourses);
 
         // Set up the search bar
         EditText searchBar = findViewById(R.id.search_bar);
+        ImageView backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Ferme l'activité et retourne à l'activité précédente
+            }
+        });
 
         // Define card click listeners (LinkedIn profile links)
         card6.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +68,14 @@ public class mentors extends AppCompatActivity {
             public void onClick(View v) {
                 String link = "https://www.linkedin.com/in/marwane-laks";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                startActivity(intent);
+            }
+        });
+        cours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mentors.this, course_crcq.class);
                 startActivity(intent);
             }
         });
