@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "198031732864",
+    "project_id": "coducatif-968da",
+    "storage_bucket": "coducatif-968da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198031732864:android:1542f62187d425ab06b665",
+        "android_client_info": {
+          "package_name": "com.example.coducatif"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198031732864-e8attbeqpr3kae0dfkdpi4gks23023qp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.coducatif",
+            "certificate_hash": "b6f8512b66b6c715798bbf346d1cdccc56bb4f28"
+          }
+        },
+        {
+          "client_id": "198031732864-jm1uv0rq5ijhdrhhbdfe2up5e0kka2vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEMogkmBemvTmqcBwRiev1a-ct0pieO8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198031732864-jm1uv0rq5ijhdrhhbdfe2up5e0kka2vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

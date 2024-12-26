@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services' // Plugin Firebase directement
+    id 'com.google.gms.google-services'
+    id 'org.jetbrains.kotlin.android'// Plugin Firebase directement
 }
 
 android {
@@ -13,6 +14,9 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
 
     buildTypes {
@@ -26,15 +30,44 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
 }
 
 dependencies {
+    buildscript {
+        dependencies {
+            classpath 'com.google.gms:google-services:4.4.0'
+        }
+    }
+
     // Dépendances AndroidX
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.10.0'
     implementation "androidx.room:room-runtime:2.5.2"
+    implementation libs.lifecycle.runtime.ktx
+    implementation libs.activity.compose
+    implementation platform(libs.compose.bom)
+    implementation libs.ui
+    implementation libs.ui.graphics
+    implementation libs.ui.tooling.preview
+    implementation libs.material3
+    androidTestImplementation platform(libs.compose.bom)
+    androidTestImplementation libs.ui.test.junit4
     annotationProcessor "androidx.room:room-compiler:2.5.2" // ou kapt pour Kotlin
 
 
@@ -42,6 +75,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.0.6'
     implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:21.3.0'
 
         implementation 'com.google.firebase:firebase-auth:21.0.8' // Firebase Authentication
         implementation 'com.google.firebase:firebase-firestore:24.4.2' // Firestore
@@ -58,4 +92,6 @@ dependencies {
 
     // Firebase Core (obligatoire pour les autres services Firebase)
     implementation 'com.google.firebase:firebase-core:21.1.1'
+    debugImplementation libs.ui.tooling
+    debugImplementation libs.ui.test.manifest
 }

@@ -27,15 +27,11 @@
             android:exported="false" />
         <!-- La bonne activité de lancement -->
 
-        <activity
-            android:name="com.example.coducatif.roadmap"
-            android:exported="false" />
+
         <activity
             android:name="com.example.coducatif.levels"
             android:exported="true" />
-        <activity
-            android:name="com.example.coducatif.course_content"
-            android:exported="false" />
+
        <activity android:name=".course_crcq"
            android:exported="false"/>
         <activity
@@ -92,6 +88,18 @@
             android:exported="false"/>
         <activity android:name=".EditProfileActivity"
             android:exported="false"/>
+        <activity android:name=".PinActivity"
+            android:exported="false"/>
+        <activity android:name=".course_content"
+            android:exported="false"/>
+        <activity android:name=".roadmap"
+            android:exported="false"/>
+        <activity android:name=".course_activity"
+            android:exported="false"/>
+        <activity android:name=".ShowRoadmapActivity"
+            android:exported="false"/>
+
+
 
         <activity android:name=".FillProfileActivity" />
         <provider
@@ -108,6 +116,7 @@
 
 
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
