@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import java.util.Random;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -22,19 +25,9 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        // Initialisation des étoiles
-        ImageView star1 = findViewById(R.id.starImageView1);
-        ImageView star2 = findViewById(R.id.starImageView2);
-        ImageView star3 = findViewById(R.id.starImageView3);
-        ImageView star4 = findViewById(R.id.starImageView4);
-        ImageView star5 = findViewById(R.id.starImageView5);
 
-        // Animation pour chaque étoile
-        animateStar(star1);
-        animateStar(star2);
-        animateStar(star3);
-        animateStar(star4);
-        animateStar(star5);
+
+
 
         // Récupérer les scores
         int score = getIntent().getIntExtra("score", 0);
@@ -89,22 +82,27 @@ public class ScoreActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
     }
 
     private String calculatePerformance(int score, int totalQuestions) {
+        if (totalQuestions == 0) return "Pas de questions répondues.";
+
         float percentage = (float) score / totalQuestions * 100;
-        Log.d("ScoreActivity", "Pourcentage : " + percentage);
 
         if (percentage >= 90) {
-            return "\uD83C\uDF89 Félicitations ! \uD83C\uDF89";
+            return "🎉 Excellent travail ! Vous êtes un champion ! 🎉";
         } else if (percentage >= 70) {
-            return "👏 Bon travail !";
+            return "👏 Super effort, continuez comme ça !";
         } else if (percentage >= 50) {
-            return "🙂 Pas mal, continuez !";
+            return "🙂 Pas mal, mais il y a encore du progrès à faire !";
+        } else if (percentage >= 30) {
+            return "🙃 Ne vous découragez pas, vous ferez mieux la prochaine fois !";
         } else {
-            return "😔 Vous pouvez faire mieux.";
+            return "😅 Tout le monde commence quelque part, continuez à essayer !";
         }
     }
+
 
     private void playCelebrationSound(int score, int totalQuestions) {
         MediaPlayer mediaPlayer;

@@ -1,113 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ScoreActivity"
+    android:id="@+id/rootLayout"
     android:padding="16dp"
     android:background="#165562">
+
+    <!-- Titre -->
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉 C'est la fin ! Consultez votre score. 🎉"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Image du trophée -->
+    <ImageView
+        android:id="@+id/trophyImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Trophée"
+        android:scaleType="centerInside"
+        android:src="@drawable/creative"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
     <!-- Texte de performance -->
     <TextView
         android:id="@+id/performanceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Performance"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#FF7043"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:text="Score atteint :"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#D2E0DF"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/trophyImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Affichage du score -->
+    <!-- Score -->
     <TextView
         android:id="@+id/scoreDisplayTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Votre performance dans le jeu :"
+        android:text="0"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:layout_below="@id/performanceTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
-
-    <!-- Image du trophée - Plus grande et centrée -->
-    <ImageView
-        android:id="@+id/trophyImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/img5"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="40dp" />
-
-    <!-- Plusieurs étoiles tombantes (5 étoiles) -->
-    <ImageView
-        android:id="@+id/starImageView1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_star_24"
-        android:layout_above="@id/trophyImageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
-
-    <ImageView
-        android:id="@+id/starImageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_star_24"
-        android:layout_above="@id/trophyImageView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp" />
-
-    <ImageView
-        android:id="@+id/starImageView3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_star_24"
-        android:layout_above="@id/trophyImageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
-
-    <ImageView
-        android:id="@+id/starImageView4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_star_24"
-        android:layout_above="@id/trophyImageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="80dp" />
-
-    <ImageView
-        android:id="@+id/starImageView5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/baseline_star_24"
-        android:layout_above="@id/trophyImageView"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="80dp" />
+        android:textColor="#E5EBE9"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/performanceTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
     <!-- Bouton Réessayer -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_retry"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Réessayer"
-        android:backgroundTint="#FF7043"
-        android:textColor="#165562"
-        android:layout_below="@id/trophyImageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#225990"
+        android:text="🔄 Réessayer"
+        android:textColor="#E4F8FF"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        app:cornerRadius="25dp"
+        app:rippleColor="#81D4FA"
+        app:layout_constraintTop_toBottomOf="@id/scoreDisplayTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Bouton Certifié -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_certified"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Certifié"
-        android:backgroundTint="#FF7043"
+        android:backgroundTint="#0AB64F"
         android:textColor="#165562"
-        android:layout_below="@id/btn_retry"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        app:cornerRadius="25dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_retry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:visibility="gone" />
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
