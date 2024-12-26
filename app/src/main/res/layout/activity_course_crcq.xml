@@ -79,23 +79,20 @@
                 android:layout_height="200dp"
                 android:layout_marginBottom="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/react_back" />
+                android:src="@drawable/react_back1" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Course :"
-                android:textColor="#F2832626"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="79dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/course_title" />
 
             <!-- Première carte : Cours -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/course_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -105,8 +102,8 @@
 
                     <!-- Icône à gauche -->
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="63dp"
+                        android:layout_height="46dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_course_image" />
 
@@ -135,22 +132,19 @@
 
                     <!-- Évaluation et icône de favori -->
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="51dp"
+                        android:layout_height="54dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_notification" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Titre de la section "Roadmap" -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Roadmap :"
-                android:textColor="#F2C84141"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="69dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/roadmap_title" />
 
             <!-- Deuxième carte : Roadmap -->
             <androidx.cardview.widget.CardView
@@ -166,8 +160,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="63dp"
+                        android:layout_height="49dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/roadmap_icon" />
 
@@ -194,24 +188,22 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="45dp"
+                        android:layout_height="39dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/evaluation_icon" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Titre de la section "Quiz" -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Quiz :"
-                android:textColor="#F2763737"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
             <!-- Troisième carte : Quiz -->
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="69dp"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/quiz_title" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/quiz_card"
                 android:layout_width="match_parent"
@@ -220,15 +212,15 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="62dp"
+                        android:layout_height="46dp"
                         android:layout_marginEnd="16dp"
-                        android:src="@drawable/quiz" />
+                        android:src="@drawable/quiz_timee" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -253,22 +245,19 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="50dp"
+                        android:layout_height="36dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/quiz" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Titre de la section "Community" -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Community :"
-                android:textColor="#F2C84141"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="69dp"
+                android:layout_marginEnd="00dp"
+                android:src="@drawable/community_title" />
 
             <!-- Quatrième carte : Community -->
             <androidx.cardview.widget.CardView
@@ -284,7 +273,7 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="40dp"
+                        android:layout_width="66dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/community_icon" />
@@ -312,10 +301,10 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="40dp"
+                        android:layout_height="43dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/evaluation_icon" />
+                        android:src="@drawable/community" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

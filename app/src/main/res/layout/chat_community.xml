@@ -1,44 +1,89 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <!-- RecyclerView pour afficher la liste des messages -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMessages"
+    <!-- Image de fond -->
+    <ImageView
+        android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
-    <!-- Zone d'envoi de message -->
+    <!-- Conteneur principal -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <!-- Champ pour écrire le message -->
-        <EditText
-            android:id="@+id/editTextMessage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <!-- Image au-dessus des messages -->
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:contentDescription="Image de l'en-tête"
+            android:scaleType="centerCrop"
+            android:src="@drawable/titre_community" />
+
+
+        <!-- RecyclerView pour afficher la liste des messages -->
+
+        <ImageView
+            android:id="@+id/dev"
+            android:layout_width="match_parent"
+            android:layout_height="282dp"
+            android:contentDescription="Image de l'en-tête"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wait_community" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:hint="Écrire un message..."
-            android:padding="10dp"
-            android:background="@drawable/edit_text_background"
-            android:inputType="text" />
+            android:padding="8dp" />
 
-        <!-- Bouton envoyer (ImageButton) -->
-        <ImageButton
-            android:id="@+id/buttonSend"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="8dp"
-            android:background="@null"
-            android:contentDescription="Envoyer"
-            android:src="@drawable/send_back"
-            android:scaleType="centerInside" />
+        <!-- Zone d'envoi de message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Champ pour écrire le message -->
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Écrire un message..."
+                android:padding="10dp"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text" />
+
+            <!-- Bouton envoyer (ImageButton) -->
+            <ImageButton
+                android:id="@+id/buttonSend"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:contentDescription="Envoyer"
+                android:src="@drawable/send_back"
+                android:scaleType="centerInside" />
+
+            <!-- Bouton Joindre une image (ImageButton) -->
+            <ImageButton
+                android:id="@+id/buttonAttachImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:src="@drawable/add_image"
+                android:contentDescription="Joindre une image"
+                android:scaleType="centerInside" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>

@@ -1,15 +1,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="8dp"
-    android:orientation="horizontal">
+    android:gravity="center_vertical">
 
     <TextView
         android:id="@+id/textViewMessage"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:background="@drawable/message_background"
-        android:padding="10dp"
-        android:textColor="#000000" />
+        android:layout_weight="1"
+        android:text="Message"
+        android:textSize="16sp"
+        android:paddingEnd="8dp" /> <!-- Ajoute un peu d'espace à droite du texte -->
+
+    <!-- Bouton Modifier -->
+    <ImageButton
+        android:id="@+id/buttonEdit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+    android:background="@null"
+    android:src="@drawable/edit_icon"
+    android:contentDescription="Modifier"
+    android:scaleType="fitCenter" />
+
+    <!-- Bouton Supprimer -->
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+    android:background="@null"
+    android:src="@drawable/delete_icon"
+    android:contentDescription="Supprimer"
+    android:scaleType="fitCenter" />
+    <ImageView
+        android:id="@+id/imageViewMessage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone" />
 </LinearLayout>
