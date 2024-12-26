@@ -30,6 +30,6 @@ public class course_crcq extends AppCompatActivity {
         findViewById(R.id.course_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, course_content.class)));
         findViewById(R.id.roadmap_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, roadmap.class)));
         findViewById(R.id.quiz_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, QuiZ1Partie1Activity.class)));
-        findViewById(R.id.community_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, InviteFriendsActivity.class)));
+        findViewById(R.id.community_card).setOnClickListener(v -> startActivity(new Intent(course_crcq.this, chat_community.class)));
     }
 }

@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import java.util.Random;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -21,6 +24,7 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
 
 
 
@@ -78,22 +82,27 @@ public class ScoreActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
     }
 
     private String calculatePerformance(int score, int totalQuestions) {
+        if (totalQuestions == 0) return "Pas de questions répondues.";
+
         float percentage = (float) score / totalQuestions * 100;
-        Log.d("ScoreActivity", "Pourcentage : " + percentage);
 
         if (percentage >= 90) {
-            return "Excellent ! 🌟 Vous êtes un génie !";
+            return "🎉 Excellent travail ! Vous êtes un champion ! 🎉";
         } else if (percentage >= 70) {
-            return "Bon travail ! 👍 Continuez comme ça.";
+            return "👏 Super effort, continuez comme ça !";
         } else if (percentage >= 50) {
-            return "Passable 🙂 Essayez encore pour mieux faire.";
+            return "🙂 Pas mal, mais il y a encore du progrès à faire !";
+        } else if (percentage >= 30) {
+            return "🙃 Ne vous découragez pas, vous ferez mieux la prochaine fois !";
         } else {
-            return "Peut mieux faire Ne vous découragez pas !";
+            return "😅 Tout le monde commence quelque part, continuez à essayer !";
         }
     }
+
 
     private void playCelebrationSound(int score, int totalQuestions) {
         MediaPlayer mediaPlayer;
