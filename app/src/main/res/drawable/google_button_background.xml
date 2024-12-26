@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Couleur bleu Google -->
+    <corners android:radius="22dp" /> <!-- Bords arrondis -->
+    <stroke
+        android:width="2dp"
+    android:color="#E8F0FE"  /> <!-- Optionnel : contour blanc -->
+</shape>

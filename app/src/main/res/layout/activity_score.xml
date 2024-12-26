@@ -6,115 +6,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScoreActivity"
-    android:padding="24dp"
-    android:background="#E8F0FE">
+    android:id="@+id/rootLayout"
+    android:padding="16dp"
+    android:background="#165562">
 
-    <!-- Title Text -->
+    <!-- Titre -->
+
+
     <TextView
-        android:id="@+id/scoreTextView"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🎉 Félicitations ! 🎉"
-        android:textSize="20sp"
-        android:textColor="#D84315"
-        android:fontFamily="monospace"
-        android:layout_marginTop="30dp"
+        android:text="🎉 C'est la fin ! Consultez votre score. 🎉"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="200dp"
         android:gravity="center"
-        android:padding="12dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Sub-title -->
-    <TextView
-        android:id="@+id/congratsTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Votre performance dans le jeu :"
-        android:textSize="20sp"
-        android:textColor="#5D4037"
-        android:fontFamily="monospace"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/scoreTextView"
+    <!-- Image du trophée -->
+    <ImageView
+        android:id="@+id/trophyImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Trophée"
+        android:scaleType="centerInside"
+        android:src="@drawable/creative"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Score Display -->
+    <!-- Texte de performance -->
     <TextView
         android:id="@+id/performanceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#FF5722"
-        android:fontFamily="monospace"
-        android:layout_marginTop="16dp"
+        android:text="Score atteint :"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#D2E0DF"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/congratsTextView"
+        app:layout_constraintTop_toBottomOf="@id/trophyImageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Performance Value -->
+    <!-- Score -->
     <TextView
         android:id="@+id/scoreDisplayTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="20dp"
-        android:textColor="#37474F"
-        android:fontFamily="monospace"
-        android:shadowColor="#FFA726"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
-        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#E5EBE9"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/performanceTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
-    <!-- Retry Button -->
+    <!-- Bouton Réessayer -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_retry"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#225990"
         android:text="🔄 Réessayer"
-        android:textColor="#FFFFFF"
+        android:textColor="#E4F8FF"
         android:textSize="18sp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="#00796B"
-        android:fontFamily="monospace"
-        android:paddingHorizontal="32dp"
-        android:paddingVertical="16dp"
-        android:elevation="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         app:cornerRadius="25dp"
+        app:rippleColor="#81D4FA"
         app:layout_constraintTop_toBottomOf="@id/scoreDisplayTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Certification Button -->
-    <Button
+    <!-- Bouton Certifié -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_certified"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Certifié"
-
-        android:layout_marginTop="20dp"
+        android:backgroundTint="#0AB64F"
+        android:textColor="#165562"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        app:cornerRadius="25dp"
         app:layout_constraintTop_toBottomOf="@id/btn_retry"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:visibility="gone" />
-
-    <!-- Trophy Image -->
-    <ImageView
-        android:id="@+id/trophyImageView"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="Trophy"
-        android:src="@drawable/img5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_certified" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
