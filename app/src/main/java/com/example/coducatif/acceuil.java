@@ -3,12 +3,15 @@ package com.example.coducatif;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.net.Uri;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -25,6 +28,8 @@ public class acceuil extends AppCompatActivity {
 
     private static final String PROFILE_TABLE = "profile"; // Ensure the correct table name
     private DBHelper dbHelper;  // Declare a DBHelper instance
+    private EditText searchBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,7 @@ public class acceuil extends AppCompatActivity {
 
         // Update the TextView with the full name
         TextView welcomeTextView = findViewById(R.id.welcome_text_view);
-        welcomeTextView.setText("Hi, " + fullName + " 🎮");
+        welcomeTextView.setText("Salut, " + fullName + " 🎮");
 
         // Initialize UI elements
         ImageView inviteFriendsIcon = findViewById(R.id.invite_friends_icon);
@@ -107,6 +112,34 @@ public class acceuil extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        searchBar = findViewById(R.id.search);
+
+        // Ajouter un TextWatcher pour détecter les changements de texte
+        searchBar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String query = s.toString().trim().toLowerCase();
+
+                // Vérifiez si le texte correspond à l'un des mots-clés
+                if (query.equals("react") || query.equals("java script") ||
+                        query.equals("java") || query.equals("symfony") || query.equals("laravel") ||
+                        query.equals("next js") ||query.equals("next") || query.equals("sap") ||
+                        query.equals("erp") || query.equals("spring")) {
+
+                    // Rediriger vers PopularActivity
+                    Intent intent = new Intent(acceuil.this, popularactivity.class);
+                    intent.putExtra("keyword", query); // Envoyer le mot-clé en extra (facultatif)
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
 
         // Set up the click listeners for navigation
         inviteFriendsIcon.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +219,7 @@ public class acceuil extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(this);
         SQLiteDatabase db = null;
         Cursor cursor = null;
-        String fullName = "Student"; // Valeur par défaut
+        String fullName = "Etudiant"; // Valeur par défaut
 
         try {
             db = dbHelper.getReadableDatabase(); // Ouvrir la base de données

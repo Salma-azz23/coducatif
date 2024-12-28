@@ -82,7 +82,7 @@ public class SignIN extends AppCompatActivity {
                 task.getResult(ApiException.class);
                 navigateToAcceuil();
             } catch (ApiException e) {
-                Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Connectez vous avec un compte Google", Toast.LENGTH_SHORT).show();
             }
         }
     }
