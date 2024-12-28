@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,9 +28,18 @@ public class PinActivity extends AppCompatActivity {
         pinDigit4 = findViewById(R.id.chiffrePIN4);
         continueButton = findViewById(R.id.boutonContinuer);
         numericKeyboard = findViewById(R.id.clavierNumerique);
+        ImageView backArrow = findViewById(R.id.boutonRetour);
 
         // Logique pour la saisie du code PIN
         setupPinInput();
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PinActivity.this, FillProfileActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override

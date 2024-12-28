@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.net.Uri;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,6 +25,9 @@ import android.widget.PopupMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+
 public class acceuil extends AppCompatActivity {
 
     private static final String PROFILE_TABLE = "profile"; // Ensure the correct table name
@@ -31,10 +35,15 @@ public class acceuil extends AppCompatActivity {
     private EditText searchBar;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil); // Use your XML layout
+
+
+
 
         // Initialize DBHelper
         dbHelper = new DBHelper(this);  // Create an instance of DBHelper
@@ -196,7 +205,7 @@ public class acceuil extends AppCompatActivity {
     }
 
     private void openCommunity() {
-        Intent intent = new Intent(this, InviteFriendsActivity.class);
+        Intent intent = new Intent(this, chat_community.class);
         startActivity(intent);
     }
 

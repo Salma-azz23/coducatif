@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
 
-                android:src="@drawable/client2"
+                android:src="@drawable/salma"
                 android:contentDescription="Image de profil"
                 android:clipToOutline="true" />
         </LinearLayout>

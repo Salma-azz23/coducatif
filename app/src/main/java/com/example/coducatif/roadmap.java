@@ -3,6 +3,7 @@ package com.example.coducatif;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ public class roadmap extends AppCompatActivity {
         setContentView(R.layout.activity_roadmap);
 
         // Lier l'image cliquable
-        ImageView roadmapIcon = findViewById(R.id.roadmap);
+        Button roadmapIcon = findViewById(R.id.roadmap);
 
         // Ajouter un écouteur pour gérer le clic
         roadmapIcon.setOnClickListener(new View.OnClickListener() {

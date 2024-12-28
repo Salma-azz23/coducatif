@@ -26,6 +26,8 @@ public class mentors extends AppCompatActivity {
         CardView card7 = findViewById(R.id.course10);
         CardView card8 = findViewById(R.id.course11);
         CardView card9 = findViewById(R.id.course12);
+        CardView card10 = findViewById(R.id.course13);
+        CardView card11 = findViewById(R.id.course14);
         Button cours= findViewById(R.id.tabcourses);
 
         // Set up the search bar
@@ -71,6 +73,23 @@ public class mentors extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        card10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String link = "https://www.linkedin.com/in/ermich-reda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                startActivity(intent);
+            }
+        });
+        card11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String link = "https://www.linkedin.com/in/fadoi-nhaila-93a61a110?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+                startActivity(intent);
+            }
+        });
+
         cours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,6 +113,8 @@ public class mentors extends AppCompatActivity {
                 filterMentors(searchText, "omar", card7);
                 filterMentors(searchText, "eduardo diogo", card8);
                 filterMentors(searchText, "marwane", card9);
+                filterMentors(searchText, "reda ermich", card10);
+                filterMentors(searchText, "Fadoi Nohaila", card11);
             }
 
             @Override

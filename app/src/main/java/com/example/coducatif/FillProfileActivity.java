@@ -40,6 +40,8 @@ public class FillProfileActivity extends AppCompatActivity {
         phoneEditText = findViewById(R.id.phoneEditText);
         profileImageView = findViewById(R.id.profileImage);
         continueButton = findViewById(R.id.continueButton);
+        ImageView backArrow = findViewById(R.id.backButton);
+
 
         dbHelper = new DBHelper(this);
 
@@ -51,6 +53,14 @@ public class FillProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDatePickerDialog();
+            }
+        });
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FillProfileActivity.this, SignUpActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
