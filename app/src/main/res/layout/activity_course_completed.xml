@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:background="#8460DCFD">
 
-    <!-- Fond transparent pour le popup -->
+    <!-- Fond transparent pour la fenêtre popup -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
             android:layout_width="300dp"
             android:layout_height="400dp"
             android:src="@drawable/course_completed"
-            android:contentDescription="Course Completed"
+            android:contentDescription="Cours terminé"
             android:layout_gravity="center" />
     </RelativeLayout>
 </RelativeLayout>

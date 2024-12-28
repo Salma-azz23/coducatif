@@ -6,49 +6,47 @@
     android:layout_height="match_parent"
     android:background="#E8F0FE"
     android:orientation="vertical"
-    android:padding="24dp"
-    >
+    android:padding="24dp">
 
-    <!-- Logo Section -->
-
-    <!-- Title Text -->
+    <!-- Section Logo -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="114dp"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="logo_desc"
+        android:contentDescription="logo_description"
         android:src="@drawable/logo_coducatif2" />
 
+    <!-- Titre principal -->
     <TextView
         android:id="@+id/sign_in_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"
-        android:text="Let's Sign In.!"
+        android:text="Connectez-vous !"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#202244" />
 
-    <!-- Subtitle Text -->
+    <!-- Sous-titre -->
     <TextView
         android:id="@+id/sign_in_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="Login to Your Account to Continue your Courses"
+        android:text="Connectez-vous à votre compte pour continuer vos cours"
         android:textSize="14sp"
         android:textColor="#545454" />
 
-    <!-- Email Input -->
+    <!-- Champ Email -->
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="Email"
+        android:hint="Adresse e-mail"
         android:drawableStart="@drawable/ic_email"
         android:inputType="textEmailAddress"
         android:background="@drawable/edit_text_background"
@@ -57,13 +55,13 @@
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical" />
 
-    <!-- Password Input -->
+    <!-- Champ Mot de passe -->
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Password"
+        android:hint="Mot de passe"
         android:drawableStart="@drawable/ic_password"
         android:drawableEnd="@drawable/ic_visibility"
         android:inputType="textPassword"
@@ -73,7 +71,7 @@
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical" />
 
-    <!-- Remember Me and Forgot Password -->
+    <!-- Se souvenir de moi -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,29 +83,24 @@
             android:id="@+id/remember_me"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember Me"
+            android:text="Se souvenir de moi"
             android:textColor="#545454" />
-
-
     </LinearLayout>
 
-    <!-- Sign In Button -->
+    <!-- Bouton Se connecter -->
     <Button
         android:id="@+id/sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Sign In"
+        android:text="Se connecter"
         android:backgroundTint="#2B7B8C"
         android:textColor="#FFFFFF"
         android:drawableEnd="@drawable/ic_arrow_right"
         android:padding="5dp"
         android:layout_gravity="center_horizontal" />
 
-    <!-- Or Continue With Text -->
-
-
-    <!-- Social Login Buttons -->
+    <!-- Bouton Connexion avec Google -->
     <LinearLayout
         android:id="@+id/login"
         android:layout_width="280dp"
@@ -118,18 +111,15 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-
-
         <ImageView
             android:id="@+id/log"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:src="@drawable/go"
             android:layout_marginEnd="0dp"
-            android:contentDescription="Google Logo"
+            android:contentDescription="Logo Google"
             android:visibility="visible"/>
 
-        <!-- Text for "Continuer avec Google" -->
         <TextView
             android:id="@+id/google_button_text"
             android:layout_width="wrap_content"
@@ -141,8 +131,4 @@
             android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <!-- Sign Up Text -->
-
-
 </LinearLayout>

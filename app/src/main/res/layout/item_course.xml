@@ -8,26 +8,26 @@
     android:elevation="4dp"
     android:layout_marginBottom="12dp">
 
-    <!-- Section Header -->
+    <!-- En-tête de section -->
     <TextView
         android:id="@+id/sectionHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:textColor="#2B7B8C"
-       android:textSize="18sp"
-       android:textStyle="bold"
-       android:padding="8dp"
-       android:visibility="gone"
-       android:background="#E8F1FF" />
+        android:textColor="#2B7B8C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:background="#E8F1FF" />
 
-    <!-- Course Content -->
+    <!-- Contenu du cours -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp">
 
-        <!-- Course Image -->
+        <!-- Image du cours -->
         <ImageView
             android:id="@+id/courseImage"
             android:layout_width="80dp"
@@ -35,18 +35,18 @@
             android:src="@drawable/ic_course_placeholder"
             android:scaleType="centerCrop"
             android:layout_marginEnd="12dp"
-            android:contentDescription="Course Image"
+            android:contentDescription="Image du cours"
             android:background="@drawable/rounded_button"
             android:elevation="2dp" />
 
-        <!-- Course Information -->
+        <!-- Informations sur le cours -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <!-- Category -->
+            <!-- Catégorie -->
             <TextView
                 android:id="@+id/Category"
                 android:layout_width="wrap_content"
@@ -59,18 +59,18 @@
                 android:padding="4dp"
                 android:layout_marginBottom="4dp" />
 
-            <!-- Course Name -->
+            <!-- Nom du cours -->
             <TextView
                 android:id="@+id/Course"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Framework of JavaScript"
+                android:text="Framework de JavaScript"
                 android:textColor="#000"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="6dp" />
 
-            <!-- Price and Rating -->
+            <!-- Prix et évaluation -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,13 +95,13 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bookmark Icon -->
+        <!-- Icône de signet -->
         <ImageView
             android:id="@+id/bookmark"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/baseline_bookmark_24"
-            android:contentDescription="Bookmark"
+            android:contentDescription="Signet"
             android:tint="#888"
             android:layout_marginStart="8dp"
             android:layout_gravity="center_vertical" />

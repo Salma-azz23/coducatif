@@ -7,47 +7,46 @@
 
     <!-- Bouton de retour et titre -->
     <ImageView
-        android:id="@+id/backButton"
+        android:id="@+id/boutonRetour"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="16dp"
-
         android:src="@drawable/ic_back_arrow" />
 
     <!-- Sous-titre -->
 
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/texteTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/backButton"
+        android:layout_alignTop="@id/boutonRetour"
         android:layout_marginStart="16dp"
         android:layout_marginTop="-3dp"
-        android:layout_toEndOf="@id/backButton"
+        android:layout_toEndOf="@id/boutonRetour"
         android:fontFamily="@font/ic_jost"
-        android:text="Create New Pin"
+        android:text="Créer un Nouveau Code PIN"
         android:textColor="#202244"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/subtitleText"
+        android:id="@+id/texteSousTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titleText"
+        android:layout_below="@id/texteTitre"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Add a Pin Number to Make Your Account\nmore Secure"
+        android:text="Ajoutez un Code PIN pour rendre votre\ncompte plus sécurisé"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textColor="#202244" />
 
     <!-- Champs de saisie du PIN -->
     <LinearLayout
-        android:id="@+id/pinContainer"
+        android:id="@+id/conteneurPIN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/subtitleText"
+        android:layout_below="@id/texteSousTitre"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
@@ -55,35 +54,35 @@
 
         <!-- Quatre TextViews pour afficher le code PIN saisi -->
         <TextView
-            android:id="@+id/pinDigit1"
+            android:id="@+id/chiffrePIN1"
             style="@style/PinDigitStyle"
             android:background="@drawable/edit_text_background"/>
 
         <TextView
-            android:id="@+id/pinDigit2"
+            android:id="@+id/chiffrePIN2"
             style="@style/PinDigitStyle"
             android:background="@drawable/edit_text_background"
             android:layout_marginStart="8dp" />
 
         <TextView
             android:background="@drawable/edit_text_background"
-            android:id="@+id/pinDigit3"
+            android:id="@+id/chiffrePIN3"
             style="@style/PinDigitStyle"
             android:layout_marginStart="8dp" />
 
         <TextView
             android:background="@drawable/edit_text_background"
-            android:id="@+id/pinDigit4"
+            android:id="@+id/chiffrePIN4"
             style="@style/PinDigitStyle"
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
     <!-- Bouton de continuation -->
     <Button
-        android:id="@+id/continueButton"
-        android:layout_below="@id/pinContainer"
+        android:id="@+id/boutonContinuer"
+        android:layout_below="@id/conteneurPIN"
         android:backgroundTint="#2B7B8C"
-        android:text="Continue"
+        android:text="Continuer"
         android:textSize="18dp"
         android:textColor="#FFFFFF"
         android:drawableEnd="@drawable/ic_arrow_right"
@@ -92,126 +91,126 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_gravity="center_horizontal"
-       />
+        />
 
     <!-- Clavier numérique -->
     <GridLayout
-        android:id="@+id/numericKeyboard"
+        android:id="@+id/clavierNumerique"
         android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@id/continueButton"
-    android:columnCount="3"
-    android:rowCount="4"
-    android:gravity="fill"
-    android:layout_margin="16dp">
+        android:layout_height="match_parent"
+        android:layout_below="@id/boutonContinuer"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:gravity="fill"
+        android:layout_margin="16dp">
 
-    <!-- Boutons pour les chiffres du clavier -->
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="1" />
+        <!-- Boutons pour les chiffres du clavier -->
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="1" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="2" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="2" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="3" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="3" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="4" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="4" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="5" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="5" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="6" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="6" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="7" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="7" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="8" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="8" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="9" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="9" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="*" /> <!-- Espace vide -->
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="*" /> <!-- Espace vide -->
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="0" />
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="0" />
 
-    <Button
-        style="@style/KeypadButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:text="⌫" />
-</GridLayout>
+        <Button
+            style="@style/KeypadButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="⌫" />
+    </GridLayout>
+
     <ImageView
-        android:id="@+id/subtitleImg"
+        android:id="@+id/imageSousTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_centerHorizontal="true"
-        android:contentDescription="to75do"
+        android:contentDescription="Image Accueil"
         android:src="@drawable/home"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"/>
 
-    </RelativeLayout>
+</RelativeLayout>

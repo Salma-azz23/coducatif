@@ -6,259 +6,260 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#333333">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <!-- Image de fond -->
-    <ImageView
-        android:id="@+id/backgroundImage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        <!-- Image de fond -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
 
-    <!-- Conteneur principal -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-    <ImageView
-        android:id="@+id/headerImage"
-        android:layout_width="377dp"
-        android:layout_height="296dp"
-        android:contentDescription="Image de l'en-tête"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cap12" />
-
-
-    <!-- Carte principale avec les détails du cours -->
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="427dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#FFFFFF"
-        app:cardCornerRadius="16dp">
-
+        <!-- Conteneur principal -->
         <LinearLayout
-            android:layout_width="360dp"
-            android:layout_height="576dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="8dp">
 
-            <!-- Section Titre et Description -->
-            <TextView
+            <!-- Image d'en-tête -->
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="377dp"
+                android:layout_height="296dp"
+                android:contentDescription="Image d'en-tête"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cap12" />
+
+            <!-- Carte principale avec les détails du cours -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Frontend course"
-                android:textColor="#FF6E6E"
-                android:textSize="14sp" />
+                android:layout_height="427dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FFFFFF"
+                app:cardCornerRadius="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="React JS"
-                android:textColor="#000000"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <!-- Informations supplémentaires (Classes et Durée) -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <!-- Icône Classe -->
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="4dp"
-                    android:src="@drawable/ic_class_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:text="21 Classes"
-                    android:textColor="#666666"
-                    android:textSize="12sp" />
-
-                <!-- Icône Durée -->
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="4dp"
-                    android:src="@drawable/ic_duration_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="42 Hours"
-                    android:textColor="#666666"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <!-- Évaluation et Prix -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="end"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:text="4.2"
-                    android:textColor="#FFCC00"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_star_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="499/-"
-                    android:textColor="#2196F3"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <!-- Onglets About et Curriculum -->
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="About" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Curriculum" />
-            </com.google.android.material.tabs.TabLayout>
-
-            <!-- Contenu de la section Curriculum -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <!-- Section 01 -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Section 01 - Introduction"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <!-- Leçon 1 -->
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="8dp">
+                    android:layout_width="360dp"
+                    android:layout_height="576dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
+                    <!-- Section Titre et Description -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:text="01"
-                        android:textColor="#2196F3"
+                        android:text="Cours Frontend"
+                        android:textColor="#FF6E6E"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Pourquoi etudier react"
+                        android:text="React JS"
                         android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="27dp"
-                        android:layout_marginStart="8dp"
-                        android:src="@drawable/ic_icon" />
-                </LinearLayout>
-
-                <!-- Leçon 2 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="8dp">
-
-                    <TextView
+                    <!-- Informations supplémentaires (Classes et Durée) -->
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:text="02"
-                        android:textColor="#2196F3"
-                        android:textSize="14sp" />
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <!-- Icône Classe -->
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/ic_class_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="21 Classes"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+
+                        <!-- Icône Durée -->
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/ic_duration_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="42 Heures"
+                            android:textColor="#666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Évaluation et Prix -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Comment le maitriser"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="37dp"
-                        android:layout_height="30dp"
-                        android:layout_marginStart="8dp"
-                        android:src="@drawable/ic_play_icon" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:text="4.2"
+                            android:textColor="#FFCC00"
+                            android:textSize="14sp" />
 
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_star_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="499/-"
+                            android:textColor="#2196F3"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Onglets À propos et Curriculum -->
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="À propos" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Curriculum" />
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <!-- Contenu de la section Curriculum -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Section 01 -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Section 01 - Introduction"
+                            android:textColor="#000000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <!-- Leçon 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="01"
+                                android:textColor="#2196F3"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Pourquoi étudier React"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="38dp"
+                                android:layout_height="27dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/ic_icon" />
+                        </LinearLayout>
+
+                        <!-- Leçon 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="02"
+                                android:textColor="#2196F3"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Comment le maîtriser"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="37dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/ic_play_icon" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Bouton S'inscrire maintenant -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/course_react"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="#2B7B8C"
+                            android:drawableEnd="@drawable/ic_arrow_right"
+                            android:text="Commencer cours maintenant"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15dp"
+                            android:textStyle="bold" /><!-- Ajout de l'événement de clic -->
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <!-- Bouton Enroll Now -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/course_react"
-                    android:layout_width="400dp"
-                    android:layout_height="56dp"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="Button with bar design"
-                    android:src="@drawable/ic_barre_enroll"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:onClick="openCoursePdf" /> <!-- Ajout de l'événement de clic -->
-            </LinearLayout>
-
-            <!-- Bouton Enroll Now -->
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-    </LinearLayout>
-</FrameLayout>
+    </FrameLayout>
 </RelativeLayout>

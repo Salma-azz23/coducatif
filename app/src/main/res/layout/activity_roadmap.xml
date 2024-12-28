@@ -49,7 +49,7 @@
 
         <LinearLayout
             android:layout_width="360dp"
-            android:layout_height="406dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -249,16 +249,18 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-                <ImageView
+                <Button
                     android:id="@+id/roadmap"
-                    android:layout_width="400dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal"
-                    android:clickable="true"
-                    android:contentDescription="Button with bar design"
-                    android:focusable="true"
-                    android:onClick="openCoursePdf"
-                    android:src="@drawable/roadmap" /> <!-- Ajout de l'événement de clic -->
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="#2B7B8C"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:text="Commencer cours maintenant"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <!-- Ajout de l'événement de clic -->
             </LinearLayout>
 
             <ImageView

@@ -33,7 +33,7 @@
                 android:background="@drawable/circle_background1"
                 android:contentDescription="Profile Image"
                 android:scaleType="centerCrop"
-                android:src="@drawable/client2" />
+                android:src="@drawable/salma" />
 
             <TextView
                 android:id="@+id/tvFullName"

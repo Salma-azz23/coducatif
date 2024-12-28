@@ -13,34 +13,32 @@
         android:orientation="vertical"
         android:paddingTop="8dp">
 
-
-        <!-- Layout principal pour les cartes de niveaux -->
-
+        <!-- Mise en page principale pour les cartes des niveaux -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
 
-            <!-- Flèche de retour -->
-
+            <!-- Bouton retour -->
 
             <ImageView
-                android:id="@+id/back_button"
+                android:id="@+id/bouton_retour"
                 android:layout_width="56dp"
                 android:layout_height="18dp"
-                android:contentDescription="Back"
+                android:contentDescription="Retour"
                 android:src="@drawable/ic_back_icon"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="-6dp"
                 tools:layout_editor_absoluteY="11dp" />
 
+            <!-- Titre de la page -->
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/titre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/back_button"
-                android:text="Content"
+                android:layout_toEndOf="@id/bouton_retour"
+                android:text="Contenu"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -49,17 +47,16 @@
                 tools:layout_editor_absoluteY="5dp" />
 
             <ImageView
-                android:id="@+id/search_icon"
+                android:id="@+id/ic_recherche"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Search"
+                android:contentDescription="Rechercher"
                 android:src="@drawable/ic_search"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -72,8 +69,6 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <!-- Image principale en haut -->
-
-            <!-- Titre de la section "Course" -->
             <ImageView
                 android:layout_width="362dp"
                 android:layout_height="200dp"
@@ -81,6 +76,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/react_back1" />
 
+            <!-- Titre de la section "Cours" -->
             <ImageView
                 android:layout_width="116dp"
                 android:layout_height="79dp"
@@ -89,7 +85,7 @@
 
             <!-- Première carte : Cours -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/course_card"
+                android:id="@+id/carte_cours"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp">
@@ -107,7 +103,7 @@
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/ic_course_image" />
 
-                    <!-- Texte et infos -->
+                    <!-- Texte et informations -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -117,7 +113,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Embrace Your Evolution"
+                            android:text="Évoluez avec confiance"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -130,7 +126,7 @@
                             android:textSize="14sp" />
                     </LinearLayout>
 
-                    <!-- Évaluation et icône de favori -->
+                    <!-- Icône de notification -->
                     <ImageView
                         android:layout_width="51dp"
                         android:layout_height="54dp"
@@ -139,16 +135,16 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Titre de la section "Roadmap" -->
+            <!-- Titre de la section "Plan de route" -->
             <ImageView
                 android:layout_width="116dp"
                 android:layout_height="69dp"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/roadmap_title" />
 
-            <!-- Deuxième carte : Roadmap -->
+            <!-- Deuxième carte : Plan de route -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/roadmap_card"
+                android:id="@+id/carte_roadmap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp">
@@ -174,7 +170,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chart Your Course"
+                            android:text="Tracez votre chemin"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -196,16 +192,15 @@
             </androidx.cardview.widget.CardView>
 
             <!-- Titre de la section "Quiz" -->
-
-            <!-- Troisième carte : Quiz -->
             <ImageView
                 android:layout_width="116dp"
                 android:layout_height="69dp"
                 android:layout_marginEnd="0dp"
                 android:src="@drawable/quiz_title" />
 
+            <!-- Troisième carte : Quiz -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/quiz_card"
+                android:id="@+id/carte_quiz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp">
@@ -231,7 +226,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Compete for Glory"
+                            android:text="Concours de gloire"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -252,16 +247,16 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Titre de la section "Community" -->
+            <!-- Titre de la section "Communauté" -->
             <ImageView
                 android:layout_width="116dp"
                 android:layout_height="69dp"
-                android:layout_marginEnd="00dp"
+                android:layout_marginEnd="0dp"
                 android:src="@drawable/community_title" />
 
-            <!-- Quatrième carte : Community -->
+            <!-- Quatrième carte : Communauté -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/community_card"
+                android:id="@+id/carte_communauté"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp">
@@ -287,7 +282,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Together We Thrive"
+                            android:text="Ensemble, on s'élève"
                             android:textColor="#000000"
                             android:textSize="16sp"
                             android:textStyle="bold" />

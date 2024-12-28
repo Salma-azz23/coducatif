@@ -7,13 +7,13 @@
     android:orientation="vertical"
     android:padding="24dp">
 
-    <!-- Logo Section -->
+    <!-- Section du logo -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="114dp"
         android:layout_gravity="center_horizontal"
-        android:contentDescription="logo_desc"
+        android:contentDescription="description_du_logo"
         android:src="@drawable/logo_coducatif2" />
 
     <TextView
@@ -22,18 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"
-        android:text="Let's Sign Up"
+        android:text="Inscrivons-nous"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#202244" />
 
-    <!-- Email Input -->
+    <!-- Champ de saisie de l'email -->
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="Email"
+        android:hint="Adresse e-mail"
         android:drawableStart="@drawable/ic_email"
         android:inputType="textEmailAddress"
         android:background="@drawable/edit_text_background"
@@ -42,13 +42,13 @@
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical" />
 
-    <!-- Password Input -->
+    <!-- Champ de saisie du mot de passe -->
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Password"
+        android:hint="Mot de passe"
         android:drawableStart="@drawable/ic_password"
         android:drawableEnd="@drawable/ic_visibility"
         android:inputType="textPassword"
@@ -58,13 +58,13 @@
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical" />
 
-    <!-- Sign Up Button -->
+    <!-- Bouton pour s'inscrire -->
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Sign Up"
+        android:text="S'inscrire"
         android:backgroundTint="#2B7B8C"
         android:textColor="#FFFFFF"
         android:drawableEnd="@drawable/ic_arrow_right"
@@ -72,14 +72,14 @@
         android:layout_gravity="center_horizontal"
         android:onClick="redirectToFillProfile"/>
 
-    <!-- Login Prompt -->
+    <!-- Invitation à se connecter -->
     <TextView
         android:id="@+id/sign_up_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:text="Already have an Account? LOG IN"
+        android:text="Vous avez déjà un compte ? CONNECTEZ-VOUS"
         android:textColor="#545454"
         android:textSize="14sp"
         android:textStyle="bold"

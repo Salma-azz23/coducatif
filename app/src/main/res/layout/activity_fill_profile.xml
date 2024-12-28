@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--suppress ALL -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +6,18 @@
     android:background="#F5F7FA"
     android:padding="16dp">
 
-
-
+    <!-- Bouton de retour -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="24dp"
         android:layout_height="27dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="27dp"
-
         android:importantForAccessibility="no"
-        android:src="@drawable/ic_back_arrow" />
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Retour" />
 
+    <!-- Titre principal -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -27,11 +26,12 @@
         android:layout_marginStart="26dp"
         android:layout_toEndOf="@id/backButton"
         android:fontFamily="@font/ic_jost"
-        android:text="Fill Your Profile"
+        android:text="Complétez votre profil"
         android:textColor="#202244"
         android:textSize="21sp"
         android:textStyle="bold" />
 
+    <!-- Conteneur de l'image de profil -->
     <RelativeLayout
         android:id="@+id/profileImageContainer"
         android:layout_width="100dp"
@@ -40,17 +40,16 @@
         android:layout_below="@id/titleText"
         android:layout_marginTop="34dp">
 
-        <!-- Image de profil principale -->
+        <!-- Image principale -->
         <ImageView
             android:id="@+id/profileImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile_edit1"
-        android:contentDescription="Image de profil"
-        android:scaleType="centerCrop"
-        tools:ignore="ImageContrastCheck" />
+            android:contentDescription="Image de profil"
+            android:scaleType="centerCrop" />
 
-        <!-- Icône d'édition en bas à droite -->
+        <!-- Icône d'édition -->
         <ImageView
             android:id="@+id/editProfileIcon"
             android:layout_width="24dp"
@@ -62,30 +61,23 @@
             android:background="@drawable/oval_blanc"
             android:contentDescription="Changer la photo"
             android:padding="3dp"
-            android:src="@drawable/ic_profile"
-            tools:ignore="ImageContrastCheck" />
-
+            android:src="@drawable/ic_profile" />
     </RelativeLayout>
 
-
-
+    <!-- Champs de texte -->
     <EditText
         android:id="@+id/fullNameEditText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/profileImageContainer"
         android:layout_marginTop="24dp"
-        android:autofillHints=""
         android:background="@drawable/rounded_background1"
-        android:hint="Full Name"
+        android:hint="Nom complet"
         android:textColor="#505050"
-        android:textStyle="bold"
         android:textColorHint="#757575"
         android:paddingStart="16dp"
-        android:textSize="16sp"
-        tools:ignore="RtlSymmetry,TextFields,TextContrastCheck,VisualLintTextFieldSize" />
+        android:textSize="16sp" />
 
-    <!-- Champ de text pour le surname -->
     <EditText
         android:id="@+id/nickNameEditText"
         android:layout_width="match_parent"
@@ -93,14 +85,11 @@
         android:layout_below="@id/fullNameEditText"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_background1"
-        android:hint="Nick Name"
+        android:hint="Surnom"
         android:textColor="#505050"
-        android:textStyle="bold"
-        android:paddingStart="16dp"
-        android:textSize="16sp"
         android:textColorHint="#757575"
-        tools:ignore="Autofill,RtlSymmetry,TextFields,VisualLintTextFieldSize,TextContrastCheck" />
-
+        android:paddingStart="16dp"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/dobEditText"
@@ -108,40 +97,29 @@
         android:layout_height="50dp"
         android:layout_below="@id/nickNameEditText"
         android:layout_marginTop="16dp"
-
         android:background="@drawable/rounded_background1"
         android:drawableStart="@drawable/ic_calendar"
-        android:hint="Date of Birth"
-        android:textColor="#505050"
-        android:textStyle="bold"
+        android:hint="Date de naissance"
         android:inputType="date"
-        android:paddingStart="16dp"
+        android:textColor="#505050"
         android:textColorHint="#757575"
-        android:textSize="16sp"
-        android:drawablePadding="8dp"
-        android:gravity="start|center_vertical"
-        tools:ignore="Autofill,RtlSymmetry,VisualLintTextFieldSize" />
-
+        android:paddingStart="16dp"
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="#505050"
-        android:textStyle="bold"
         android:layout_below="@id/dobEditText"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_background1"
         android:drawableStart="@drawable/ic_email"
         android:hint="Email"
-        android:textColorHint="#757575"
-        android:drawablePadding="8dp"
-        android:gravity="start|center_vertical"
         android:inputType="textEmailAddress"
+        android:textColor="#505050"
+        android:textColorHint="#757575"
         android:paddingStart="16dp"
-        android:textSize="16sp"
-        tools:ignore="Autofill,RtlSymmetry,VisualLintTextFieldSize,TextContrastCheck" />
-
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/phoneEditText"
@@ -149,42 +127,25 @@
         android:layout_height="50dp"
         android:layout_below="@id/emailEditText"
         android:layout_marginTop="16dp"
-        android:autofillHints=""
         android:background="@drawable/rounded_background1"
-        android:hint="Phone"
-        android:textColor="#505050"
-        android:textStyle="bold"
+        android:hint="Téléphone"
         android:inputType="phone"
+        android:textColor="#505050"
         android:textColorHint="#757575"
         android:paddingStart="16dp"
-        android:textSize="16sp"
-        tools:ignore="RtlSymmetry,VisualLintTextFieldSize,TextContrastCheck" />
+        android:textSize="16sp" />
 
+    <!-- Bouton Continuer -->
     <Button
         android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/phoneEditText"
         android:layout_marginTop="24dp"
         android:backgroundTint="#2B7B8C"
-        android:text="continue"
+        android:text="Continuer"
         android:textColor="#FFFFFF"
-        android:drawable="@drawable/fill_h"
-        android:gravity="center"
-        tools:ignore="VisualLintButtonSize"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:drawableEnd="@drawable/ic_arrow_right"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
-    <ImageView
-        android:id="@+id/subtitleImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_centerHorizontal="true"
-        android:contentDescription="todo444"
-        android:src="@drawable/home"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"/>
+        android:padding="10dp" />
 </RelativeLayout>
