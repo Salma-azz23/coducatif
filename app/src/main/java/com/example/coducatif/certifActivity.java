@@ -33,13 +33,13 @@ public class certifActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Récupérer l'image à partir des ressources drawable
-                Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.certificate); // Remplacez par le nom de votre image
+                Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.certificat); // Remplacez par le nom de votre image
 
                 // Copie de l'image dans le stockage local
                 try {
                     File file = new File(getExternalFilesDir(null), "certificat.png"); // Emplacement où l'image sera stockée
                     FileOutputStream outputStream = new FileOutputStream(file);
-                    image.compress(Bitmap.CompressFormat.JPEG, 100, outputStream); // Compresser l'image et l'écrire dans le fichier
+                    image.compress(Bitmap.CompressFormat.PNG, 100, outputStream); // Compresser l'image et l'écrire dans le fichier
                     outputStream.close();
 
                     // Vérifier si l'image a été copiée avec succès
