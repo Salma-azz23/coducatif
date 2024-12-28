@@ -196,7 +196,7 @@ public class acceuil extends AppCompatActivity {
     }
 
     private void openCommunity() {
-        Intent intent = new Intent(this, InviteFriendsActivity.class);
+        Intent intent = new Intent(this, chat_community.class);
         startActivity(intent);
     }
 
