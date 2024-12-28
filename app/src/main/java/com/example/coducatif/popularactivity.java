@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class popularactivity extends AppCompatActivity {
     private EditText searchBar;
     private CardView UICard, interactiveUICard, card1, card2, card3, card4, card5;
@@ -31,6 +33,7 @@ public class popularactivity extends AppCompatActivity {
         card5 = findViewById(R.id.course6);
         searchBar = findViewById(R.id.search_bar);
         ImageView backButton = findViewById(R.id.back_button);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         // Ajouter des actions de clic sur les cartes
         UICard.setOnClickListener(v -> openYouTubeLink("https://youtu.be/Ew7KG2j8eII?si=A9eIpNTNvCjaD9tu"));
@@ -54,38 +57,45 @@ public class popularactivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {}
         });
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish(); // Ferme l'activité et retourne à l'activité précédente
+
+        backButton.setOnClickListener(v -> finish()); // Ferme l'activité
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.nav_home:
+                    startActivity(new Intent(this, acceuil.class));
+                    return true;
+                case R.id.nav_help:
+                    startActivity(new Intent(this, chat_community.class));
+                    return true;
+                case R.id.nav_profile:
+                    startActivity(new Intent(this, ProfileActivity.class));
+                    return true;
+                default:
+                    return false;
             }
         });
     }
 
-    // Ouvrir un lien YouTube
     private void openYouTubeLink(String link) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         startActivity(intent);
     }
 
-    // Ouvrir une autre activité
     private void openActivity(Class<?> activityClass) {
-        Intent intent = new Intent(popularactivity.this, activityClass);
+        Intent intent = new Intent(PopularActivity.this, activityClass);
         startActivity(intent);
     }
 
-    // Filtrer les cartes en fonction de la recherche
     private void filterResults(String query) {
         query = query.toLowerCase();
 
-        // Vérification dynamique des contenus
-        UICard.setVisibility("Java Script".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        interactiveUICard.setVisibility("React Js".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        card1.setVisibility("symfony".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        card2.setVisibility("Laravel".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        card3.setVisibility("nest js".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        card4.setVisibility("SAP ERP".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
-        card5.setVisibility("Spring".toLowerCase().contains(query) ? View.VISIBLE : View.GONE);
+        UICard.setVisibility("javascript".contains(query) ? View.VISIBLE : View.GONE);
+        interactiveUICard.setVisibility("reactjs".contains(query) ? View.VISIBLE : View.GONE);
+        card1.setVisibility("symfony".contains(query) ? View.VISIBLE : View.GONE);
+        card2.setVisibility("laravel".contains(query) ? View.VISIBLE : View.GONE);
+        card3.setVisibility("nestjs".contains(query) ? View.VISIBLE : View.GONE);
+        card4.setVisibility("saperp".contains(query) ? View.VISIBLE : View.GONE);
+        card5.setVisibility("spring".contains(query) ? View.VISIBLE : View.GONE);
     }
-
 }
