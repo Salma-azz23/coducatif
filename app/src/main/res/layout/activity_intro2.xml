@@ -5,48 +5,66 @@
     android:layout_height="match_parent"
     android:background="#F5F9FF">
 
+    <!-- Bouton "Passer" en haut à droite -->
     <TextView
         android:id="@+id/skipText"
-        android:layout_width="wrap_content"
+        android:layout_width="59dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="13dp"
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/ic_jost"
-        android:text="Skip"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="Passer"
         android:textColor="#202244"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:ignore="RelativeOverlap" />
 
+    <!-- Image centrale -->
+    <ImageView
+        android:id="@+id/centralImage"
+        android:layout_width="168dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:src="@drawable/data" />
+
+    <!-- Titre principal -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Get Online Certificate"
-        android:textSize="24sp"
-        android:textColor="#202244"
+        android:layout_marginTop="359dp"
         android:fontFamily="@font/ic_jost"
-        android:textStyle="bold" />
+        android:text="Apprenez à tout moment"
+        android:textColor="#2B7B8C"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:ignore="RelativeOverlap" />
 
+    <!-- Sous-titre -->
     <TextView
         android:id="@+id/subtitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
         android:layout_below="@id/titleText"
+        android:layout_marginTop="-4dp"
         android:layout_centerHorizontal="true"
-        android:text="Analyse your scores and Track your results"
-        android:textColor="#545454"
-        android:textSize="14sp"
         android:gravity="center"
-        android:textStyle="bold"/>
+        android:text="Réservez ou consultez les conférences pour l'avenir"
+        android:textColor="#181616"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <!-- Pagination Indicators -->
-    <!-- Conteneur horizontal pour les indicateurs de pagination et le bouton -->
+    <!-- Conteneur du bas avec pagination et bouton "Commencer" -->
     <LinearLayout
         android:id="@+id/bottomContainer"
         android:layout_width="match_parent"
@@ -71,7 +89,7 @@
                 android:layout_height="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/paginationoval"
-                android:contentDescription="indicator1"
+                android:contentDescription="indicateur1"
                 tools:ignore="ImageContrastCheck" />
 
             <ImageView
@@ -80,7 +98,7 @@
                 android:layout_height="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/paginationoval"
-                android:contentDescription="indicator2"
+                android:contentDescription="indicateur2"
                 tools:ignore="ImageContrastCheck" />
 
             <ImageView
@@ -88,10 +106,10 @@
                 android:layout_width="20dp"
                 android:layout_height="8dp"
                 android:background="@drawable/rectangle"
-                android:contentDescription="indicator3" />
+                android:contentDescription="indicateur3" />
         </LinearLayout>
 
-        <!-- Bouton Get Started -->
+        <!-- Bouton "Commencer" -->
         <Button
             android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
@@ -99,25 +117,12 @@
             android:layout_marginEnd="16dp"
             android:backgroundTint="#2B7B8C"
             android:drawableEnd="@drawable/ic_arrow_right"
-            android:text="Get Started"
+            android:text="Commencer"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
             android:textStyle="bold" />
-
-
-
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/subtitleImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_centerHorizontal="true"
-        android:contentDescription="to75do"
-        android:src="@drawable/home"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"/>
+    <!-- Image de sous-titre -->
 
 </RelativeLayout>
