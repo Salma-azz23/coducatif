@@ -21,12 +21,12 @@ public class PinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
 
-        pinDigit1 = findViewById(R.id.pinDigit1);
-        pinDigit2 = findViewById(R.id.pinDigit2);
-        pinDigit3 = findViewById(R.id.pinDigit3);
-        pinDigit4 = findViewById(R.id.pinDigit4);
-        continueButton = findViewById(R.id.continueButton);
-        numericKeyboard = findViewById(R.id.numericKeyboard);
+        pinDigit1 = findViewById(R.id.chiffrePIN1);
+        pinDigit2 = findViewById(R.id.chiffrePIN2);
+        pinDigit3 = findViewById(R.id.chiffrePIN3);
+        pinDigit4 = findViewById(R.id.chiffrePIN4);
+        continueButton = findViewById(R.id.boutonContinuer);
+        numericKeyboard = findViewById(R.id.clavierNumerique);
 
         // Logique pour la saisie du code PIN
         setupPinInput();
